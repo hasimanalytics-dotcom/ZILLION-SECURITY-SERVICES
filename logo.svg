@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 44" fill="none" role="img" aria-label="Zillion Security Services">
+  <g transform="translate(2,2)">
+    <path d="M20 0 L40 8 L40 22 C40 34 30 42 20 46 C10 42 0 34 0 22 L0 8 Z" fill="#0057b8"/>
+    <path d="M11 14 L29 14 L11 32 L29 32" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="50" y="22" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#0f2a43">Zillion</text>
+  <text x="50" y="38" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#0057b8" letter-spacing="2.5">SECURITY SERVICES</text>
+</svg>
