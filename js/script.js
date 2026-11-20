@@ -8,14 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let isOpen = false;
     menuBtn.addEventListener('click', () => {
       isOpen = !isOpen;
-      mobileMenu.style.display = isOpen ? 'block' : 'none';
-      menuBtn.innerHTML = isOpen ? closeSvg : menuSvg;
+        mobileMenu.style.display = isOpen ? 'block' : 'none';
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        menuBtn.innerHTML = isOpen ? closeSvg : menuSvg;
     });
 
     document.querySelectorAll('.mobile-menu a, .mobile-phone').forEach((link) => {
       link.addEventListener('click', () => {
         isOpen = false;
         mobileMenu.style.display = 'none';
+        menuBtn.setAttribute('aria-expanded', 'false');
         menuBtn.innerHTML = menuSvg;
       });
     });

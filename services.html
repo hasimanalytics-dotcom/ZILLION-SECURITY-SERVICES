@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
   </head>
   <body>
     <div class="top-bar">
@@ -241,8 +242,9 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script>
+    <script src="js/components.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+    <script type="module">
       document.getElementById('year').textContent = new Date().getFullYear();
       (function () {
         var els = document.querySelectorAll('.animate, .animate-left, .animate-right, .animate-zoom');
