@@ -192,7 +192,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 96px;
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -225,13 +225,13 @@ img {
 }
 
 .brand-logo {
-  height: 40px;
+  height: 72px;
   width: auto;
   display: block;
 }
 
 .footer-logo {
-  height: 30px;
+  height: 64px;
   width: auto;
   display: block;
   margin-bottom: 16px;
@@ -410,53 +410,124 @@ img {
 }
 
 .hero-aus {
-  background: #fff;
-  color: var(--primary);
+  background: #0073a8;
+  color: #fff;
   padding: 0;
-  min-height: 430px;
+  min-height: 0;
 }
 
 .hero-aus-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 430px;
+  align-items: center;
+  min-height: 0;
 }
 
 .hero-aus-media {
   position: relative;
   overflow: hidden;
-  background: var(--primary);
+  background: var(--primary-dark);
+  height: 0;
+  padding-bottom: 30%;
+  margin-top: 10px;
 }
 
 .hero-aus-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+.hero-aus-media.in-view img {
+  animation: heroMediaMotion 14s ease-in-out infinite alternate;
+}
+
 .hero-aus-copy {
   display: flex;
   align-items: center;
-  padding: 48px clamp(24px, 5vw, 80px);
-  background: #fff;
+  justify-content: flex-end;
+  padding: 10px 15px 20px;
+  background: transparent;
+  text-align: right;
 }
 
 .hero-aus-copy h1 {
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: 1.12;
   margin: 0;
-  color: var(--primary);
-  letter-spacing: -0.02em;
+  color: #fff;
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: right;
 }
 
 .hero-aus-copy h1 span {
-  font-size: inherit;
-  color: var(--primary);
+  font-size: 16px;
+  color: #fff;
 }
 
-.hero-aus-divider {
+.hero-aus-copy h1 span.hero-aus-divider {
+  font-size: 20px;
   color: #e06c2a;
-  padding: 0 6px;
+  padding: 0 4px;
+}
+
+@media (min-width: 480px) {
+  .hero-aus-copy h1 {
+    font-size: 25px;
+  }
+
+  .hero-aus-copy h1 span {
+    font-size: 18px;
+  }
+
+  .hero-aus-copy h1 span.hero-aus-divider {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-aus-copy h1 {
+    font-size: 35px;
+  }
+
+  .hero-aus-copy h1 span {
+    font-size: 26px;
+  }
+
+  .hero-aus-copy h1 span.hero-aus-divider {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-aus-media {
+    margin-top: 0;
+  }
+
+  .hero-aus-copy {
+    padding: 30px;
+  }
+
+  .hero-aus-copy h1,
+  .hero-aus-copy h1 span,
+  .hero-aus-copy h1 span.hero-aus-divider {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-aus-copy {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-aus-copy h1 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -465,11 +536,17 @@ img {
   }
 
   .hero-aus-media {
-    min-height: 260px;
+    min-height: 140px;
+  }
+}
+
+@keyframes heroMediaMotion {
+  from {
+    transform: scale(1.02) translateX(0);
   }
 
-  .hero-aus-copy {
-    padding: 36px 24px;
+  to {
+    transform: scale(1.08) translateX(-1.5%);
   }
 }
 
@@ -1233,9 +1310,15 @@ footer {
   }
   .navbar .container {
     height: auto;
-    min-height: 72px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    min-height: 84px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .brand-logo {
+    height: 60px;
+  }
+  .footer-logo {
+    height: 52px;
   }
   .hero h1 {
     font-size: 2.25rem;
