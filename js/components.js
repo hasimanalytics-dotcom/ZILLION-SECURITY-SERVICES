@@ -1,7 +1,4 @@
 import heroImageUrl from '../assets/hero-composition.webp';
-import slideEntranceUrl from '../assets/hero-slide-entrance.webp';
-import slideDuoUrl from '../assets/hero-slide-duo.webp';
-import slideGuardsUrl from '../assets/hero-slide-guards.webp';
 
 (function () {
   const searchIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>';
@@ -25,29 +22,6 @@ import slideGuardsUrl from '../assets/hero-slide-guards.webp';
     ['Offices', 'contact.html', 'offices'],
     ['About Us', 'about.html'],
     ['Careers', 'contact.html', 'careers']
-  ];
-
-  const heroSlides = [
-    {
-      image: slideEntranceUrl,
-      alt: 'Security professional at a modern corporate glass entrance',
-      lines: ['SECURITY YOU CAN TRUST.', 'PROTECTION YOU CAN COUNT ON.']
-    },
-    {
-      image: slideDuoUrl,
-      alt: 'Two trained security guards on duty',
-      lines: ['YOUR WORLD.', 'OUR RESPONSIBILITY.']
-    },
-    {
-      image: slideGuardsUrl,
-      alt: 'Professional security guards standing ready',
-      lines: ['A SAFER TOMORROW', 'STARTS WITH US.']
-    },
-    {
-      image: slideGuardsUrl,
-      alt: 'Zillion Security guards representing trust and protection',
-      lines: ['BEYOND SECURITY.', 'BUILDING TRUST.']
-    }
   ];
 
   function escapeHtml(value) {
@@ -250,11 +224,6 @@ import slideGuardsUrl from '../assets/hero-slide-guards.webp';
 
   class SiteHero extends HTMLElement {
     connectedCallback() {
-      if (this.getAttribute('slides') === 'true') {
-        this.renderSlides();
-        return;
-      }
-
       const raw = this.getAttribute('headline') || "READY FOR|WHAT'S NEXT";
       const lines = raw.indexOf('|') !== -1 ? raw.split('|') : raw.split(/,\s*/);
       const headline = lines.map(function (line) {
@@ -273,122 +242,6 @@ import slideGuardsUrl from '../assets/hero-slide-guards.webp';
         '<div class="corp-hero__visual animate-zoom delay-3">' +
         '<img src="' + image + '" alt="Security professional with surveillance technology and modern commercial infrastructure" width="616" height="578" fetchpriority="high" decoding="async" />' +
         '</div></div></section>';
-    }
-
-    renderSlides() {
-      const images = heroSlides.map(function (slide, index) {
-        return '<div class="corp-slide__image' + (index === 0 ? ' is-active' : '') + '" style="background-image:url(\'' + slide.image + '\')" role="img" aria-label="' + escapeHtml(slide.alt) + '"></div>';
-      }).join('');
-      const dots = heroSlides.map(function (slide, index) {
-        return '<button type="button" class="corp-slides__dot' + (index === 0 ? ' is-active' : '') + '" data-slide="' + index + '" aria-label="Show slide ' + (index + 1) + ': ' + escapeHtml(slide.lines.join(' ')) + '"' + (index === 0 ? ' aria-current="true"' : '') + '></button>';
-      }).join('');
-
-      this.innerHTML =
-        '<section class="hero corp-hero corp-hero--slides"><div class="corp-slides" aria-roledescription="carousel" aria-label="Zillion Security commitments">' +
-        '<div class="corp-slides__media" aria-hidden="true">' + images + '</div>' +
-        '<div class="corp-slides__inner"><div class="corp-slides__copy">' +
-        '<span class="corp-hero__eyebrow">Zillion Security Services</span>' +
-        '<div class="corp-slides__text"><h1>' + heroSlides[0].lines.map(function (line) { return '<span>' + escapeHtml(line) + '</span>'; }).join('') + '</h1></div>' +
-        '<div class="corp-slides__controls"><div class="corp-slides__dots">' + dots + '</div>' +
-        '<span class="corp-slides__count">01 / ' + String(heroSlides.length).padStart(2, '0') + '</span></div>' +
-        '</div></div></div></section>';
-
-      const root = this.querySelector('.corp-slides');
-      const text = root.querySelector('.corp-slides__text');
-      const headline = root.querySelector('h1');
-      const slideImages = root.querySelectorAll('.corp-slide__image');
-      const dotButtons = root.querySelectorAll('.corp-slides__dot');
-      const count = root.querySelector('.corp-slides__count');
-      let current = 0;
-      let timer = null;
-
-      function headlineMarkup(index) {
-        return heroSlides[index].lines.map(function (line) {
-          return '<span>' + escapeHtml(line) + '</span>';
-        }).join('');
-      }
-
-      function stop() {
-        if (timer) window.clearInterval(timer);
-        timer = null;
-      }
-
-      function next() {
-        activate((current + 1) % heroSlides.length);
-      }
-
-      function previous() {
-        activate((current - 1 + heroSlides.length) % heroSlides.length);
-      }
-
-      function activate(index) {
-        if (index === current) return;
-        text.classList.add('is-leaving');
-        window.setTimeout(function () {
-          headline.innerHTML = headlineMarkup(index);
-          text.classList.remove('is-leaving');
-          text.classList.add('is-entering');
-          window.setTimeout(function () {
-            text.classList.remove('is-entering');
-          }, 620);
-        }, 240);
-        slideImages.forEach(function (image, slideIndex) {
-          image.classList.toggle('is-active', slideIndex === index);
-        });
-        dotButtons.forEach(function (dot, slideIndex) {
-          dot.classList.toggle('is-active', slideIndex === index);
-          if (slideIndex === index) dot.setAttribute('aria-current', 'true');
-          else dot.removeAttribute('aria-current');
-        });
-        count.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(heroSlides.length).padStart(2, '0');
-        current = index;
-      }
-
-      function start() {
-        stop();
-        timer = window.setInterval(next, 5200);
-      }
-
-      dotButtons.forEach(function (dot) {
-        dot.addEventListener('click', function () {
-          activate(Number(dot.dataset.slide));
-          start();
-        });
-      });
-
-      root.addEventListener('mouseenter', stop);
-      root.addEventListener('mouseleave', start);
-      root.addEventListener('focusin', stop);
-      root.addEventListener('focusout', function (event) {
-        if (!root.contains(event.relatedTarget)) start();
-      });
-      root.addEventListener('keydown', function (event) {
-        if (event.key === 'ArrowRight') {
-          next();
-          start();
-        }
-        if (event.key === 'ArrowLeft') {
-          previous();
-          start();
-        }
-      });
-
-      let touchStartX = null;
-      root.addEventListener('touchstart', function (event) {
-        touchStartX = event.changedTouches[0].screenX;
-      }, { passive: true });
-      root.addEventListener('touchend', function (event) {
-        if (touchStartX === null) return;
-        const distance = event.changedTouches[0].screenX - touchStartX;
-        if (Math.abs(distance) > 50) {
-          if (distance < 0) next();
-          else previous();
-          start();
-        }
-        touchStartX = null;
-      }, { passive: true });
-
-      start();
     }
   }
 
@@ -409,7 +262,6 @@ import slideGuardsUrl from '../assets/hero-slide-guards.webp';
     const hero = document.createElement('site-hero');
     hero.setAttribute('headline', home ? "READY FOR|WHAT'S NEXT" : (heading ? heading.textContent.replace(/\s+/g, ' ').trim() : "READY FOR|WHAT'S NEXT"));
     hero.setAttribute('statement', 'Your trusted partner in creating value');
-    hero.setAttribute('slides', home ? 'true' : 'false');
     oldHero.replaceWith(hero);
   }
 })();
