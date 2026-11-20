@@ -225,13 +225,13 @@ img {
 }
 
 .brand-logo {
-  height: 72px;
+  height: 90px;
   width: auto;
   display: block;
 }
 
 .footer-logo {
-  height: 64px;
+  height: 80px;
   width: auto;
   display: block;
   margin-bottom: 16px;
@@ -1301,7 +1301,7 @@ footer {
     height: 60px;
   }
   .footer-logo {
-    height: 52px;
+    height: 64px;
   }
   .hero h1 {
     font-size: 2.25rem;
@@ -1338,15 +1338,6 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
-}
-.brand-tagline {
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  white-space: nowrap;
 }
 .nav-links {
   gap: 24px;
@@ -1436,14 +1427,6 @@ footer {
   align-items: flex-start;
   gap: 0;
 }
-.footer-tagline {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
 .footer-desc {
   max-width: 300px;
 }
@@ -1513,9 +1496,6 @@ footer {
 }
 
 @media (max-width: 991px) {
-  .brand-tagline {
-    display: none;
-  }
   .tech-img {
     height: 320px;
   }
