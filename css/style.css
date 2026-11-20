@@ -224,6 +224,19 @@ img {
   fill: #fff;
 }
 
+.brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo {
+  height: 30px;
+  width: auto;
+  display: block;
+  margin-bottom: 16px;
+}
+
 .nav-links {
   display: none;
   align-items: center;
