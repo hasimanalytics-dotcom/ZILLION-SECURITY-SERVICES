@@ -133,7 +133,7 @@ button {
 }
 
 .topbar {
-  background: var(--dark);
+  background: #000000;
   color: #d7dde5;
   font-size: 0.78rem;
 }
@@ -180,13 +180,16 @@ button {
   font-weight: 700;
 }
 
-.site-header {
+.site-head {
   position: sticky;
   top: 0;
   z-index: 50;
+  box-shadow: 0 6px 22px rgba(21, 28, 38, 0.12);
+}
+
+.site-header {
   background: rgba(255, 255, 255, 0.98);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 6px 22px rgba(21, 28, 38, 0.05);
 }
 
 .header-inner {

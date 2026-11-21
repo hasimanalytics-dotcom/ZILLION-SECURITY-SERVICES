@@ -141,6 +141,7 @@ const primaryNav = [
 const linkList = (items, className) => `<ul class="${className}">${items.map((item) => `<li><a href="${item.href}">${esc(item.label)}</a></li>`).join('')}</ul>`
 
 const header = () => `
+<div class="site-head">
 <div class="topbar">
   <div class="container topbar-inner">
     <div class="topbar-contact">
@@ -194,7 +195,8 @@ const header = () => `
       <a class="btn btn-primary mobile-cta" href="contact-us.html">Contact Us ${icon('arrow')}</a>
     </div>
   </nav>
-</header>`
+</header>
+</div>`
 
 const footer = () => `
 <footer class="site-footer">
