@@ -217,7 +217,7 @@ const footer = () => `
         <h2 class="footer-heading">Services</h2>
         ${linkList(services.slice(0, 8).map((service) => ({ label: service.label, href: `service-${service.slug}.html` })), 'footer-links')}
         <p>Security Services<br>Security Guard Services<br>Security Services For Office<br>Security Services For Bouncer<br>Security Services For Bank<br>Security Services For Residence<br>Security Services For All India<br>Security Servic...</p>
-        <p class="footer-source">Source: Justdial.com – Read more at: <a href="https://www.justdial.com/Mumbai/Zillion-Security-Service-Jogeshwari-West/022PXX22-XX22-240701124955-I6I9_BZDET" target="_blank" rel="noopener">www.justdial.com/Mumbai/Zillion-Security-Service-Jogeshwari-West/022PXX22-XX22-240701124955-I6I9_BZDET</a></p>
+        <p class="footer-source">Source: Justdial.com</p>
       </div>
       <div class="footer-column">
         <h2 class="footer-heading">More Services</h2>

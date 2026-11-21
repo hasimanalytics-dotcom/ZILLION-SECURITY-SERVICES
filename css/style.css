@@ -11,7 +11,7 @@
   --dark: #151c26;
   --dark-2: #202a36;
   --topbar-height: 40px;
-  --nav-height: 62px;
+  --nav-height: 58px;
   --brand-mark-width: 180px;
   --brand-mark-mat: 12px;
   --brand-mark-side: 1px;
@@ -1589,7 +1589,7 @@ button {
 
 .site-footer {
   padding: 76px 0 0;
-  background: #111820;
+  background: #000;
   color: #c5ced8;
 }
 
@@ -1683,11 +1683,6 @@ button {
   margin: 0 0 8px;
   font-size: 0.74rem;
   line-height: 1.55;
-}
-
-.footer-source a {
-  color: #ff9a9f;
-  overflow-wrap: anywhere;
 }
 
 .footer-enquire {
@@ -2183,7 +2178,7 @@ button {
 }
 
 @media (max-width: 1020px) {
-  .site-head { --nav-height: 60px; --brand-mark-width: 138px; --brand-mark-mat: 10px; --brand-mark-side: 1px; --logo-reserve: 198px; }
+  .site-head { --nav-height: 56px; --brand-mark-width: 138px; --brand-mark-mat: 10px; --brand-mark-side: 1px; --logo-reserve: 198px; }
   .desktop-nav { display: none; }
   .menu-toggle { display: flex; }
   .header-inner { justify-content: space-between; }
@@ -2202,7 +2197,7 @@ button {
 }
 
 @media (max-width: 760px) {
-  .site-head { --topbar-height: 36px; --nav-height: 52px; --brand-mark-width: 102px; --brand-mark-mat: 8px; --brand-mark-side: 1px; --logo-reserve: 150px; }
+  .site-head { --topbar-height: 36px; --nav-height: 48px; --brand-mark-width: 102px; --brand-mark-mat: 8px; --brand-mark-side: 1px; --logo-reserve: 150px; }
   .container { width: min(100% - 32px, 1240px); }
   .topbar-contact { gap: 16px; }
   .topbar-link { font-size: 0.72rem; }
