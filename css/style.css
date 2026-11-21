@@ -10,6 +10,12 @@
   --white: #ffffff;
   --dark: #151c26;
   --dark-2: #202a36;
+  --topbar-height: 40px;
+  --nav-height: 90px;
+  --logo-overhang: 40px;
+  --logo-panel-width: 180px;
+  --logo-reserve: 220px;
+  --logo-panel-height: calc(var(--topbar-height) + var(--nav-height) + var(--logo-overhang));
   --shadow: 0 18px 45px rgba(21, 28, 38, 0.12);
   --radius: 14px;
 }
@@ -133,8 +139,8 @@ button {
 }
 
 .topbar {
-  background: #000000;
-  color: #d7dde5;
+  background: #08090B;
+  color: rgba(255, 255, 255, 0.88);
   font-size: 0.78rem;
 }
 
@@ -142,14 +148,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 40px;
+  min-height: var(--topbar-height);
   gap: 20px;
+  padding-left: var(--logo-reserve);
 }
 
 .topbar-contact {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
 }
 
 .topbar-link,
@@ -165,6 +172,23 @@ button {
   color: var(--white);
 }
 
+.topbar-link + .topbar-link {
+  position: relative;
+  padding-left: 22px;
+}
+
+.topbar-link + .topbar-link::before,
+.topbar-alt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 14px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.22);
+}
+
 .topbar-link .icon {
   width: 15px;
   height: 15px;
@@ -172,7 +196,9 @@ button {
 }
 
 .topbar-alt {
-  color: #aeb7c2;
+  position: relative;
+  padding-left: 22px;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .topbar-alt a {
@@ -184,11 +210,12 @@ button {
   position: sticky;
   top: 0;
   z-index: 50;
-  box-shadow: 0 6px 22px rgba(21, 28, 38, 0.12);
+  isolation: isolate;
+  box-shadow: 0 10px 30px rgba(8, 9, 11, 0.18);
 }
 
 .site-header {
-  background: rgba(255, 255, 255, 0.98);
+  background: var(--white);
   border-bottom: 1px solid var(--line);
 }
 
@@ -196,18 +223,31 @@ button {
   display: flex;
   align-items: center;
   gap: 28px;
-  min-height: 82px;
+  min-height: var(--nav-height);
+  padding-left: var(--logo-reserve);
 }
 
-.brand {
+.logo-panel {
+  position: absolute;
+  top: 0;
+  left: max(24px, calc((100% - 1240px) / 2));
+  z-index: 55;
   display: flex;
   align-items: center;
-  flex: 0 0 auto;
+  justify-content: center;
+  width: var(--logo-panel-width);
+  height: var(--logo-panel-height);
+  padding: 18px 16px 26px;
+  border: 1px solid rgba(21, 28, 38, 0.1);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  background: var(--white);
+  box-shadow: 0 16px 32px rgba(8, 9, 11, 0.24), 0 3px 10px rgba(8, 9, 11, 0.12);
 }
 
-.brand-logo {
-  width: 210px;
-  max-height: 58px;
+.logo-panel img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -439,6 +479,7 @@ button {
   top: 100%;
   left: 0;
   right: 0;
+  z-index: 65;
   max-height: calc(100vh - 82px);
   overflow-y: auto;
   border-top: 1px solid var(--line);
@@ -627,6 +668,7 @@ button {
 
 .hero-inner {
   position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   min-height: 600px;
@@ -2160,13 +2202,14 @@ button {
 @media (max-width: 1180px) {
   .nav-list { gap: 14px; }
   .nav-link { font-size: 0.78rem; }
-  .brand-logo { width: 180px; }
   .header-inner { gap: 18px; }
   .mega { width: 680px; }
   .footer-top { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (max-width: 1020px) {
+  .site-head { --nav-height: 82px; --logo-overhang: 28px; --logo-panel-width: 150px; --logo-reserve: 180px; }
+  .logo-panel { padding: 14px 12px 20px; }
   .desktop-nav { display: none; }
   .menu-toggle { display: flex; }
   .header-inner { justify-content: space-between; }
@@ -2185,12 +2228,12 @@ button {
 }
 
 @media (max-width: 760px) {
+  .site-head { --topbar-height: 36px; --nav-height: 70px; --logo-overhang: 14px; --logo-panel-width: 118px; --logo-reserve: 136px; }
   .container { width: min(100% - 32px, 1240px); }
   .topbar-alt { display: none; }
   .topbar-contact { gap: 16px; }
   .topbar-link { font-size: 0.72rem; }
-  .header-inner { min-height: 70px; }
-  .brand-logo { width: 160px; }
+  .logo-panel { padding: 10px 9px 16px; }
   .contact-btn { display: none; }
   .section,
   .network-section,
@@ -2222,8 +2265,9 @@ button {
 }
 
 @media (max-width: 520px) {
+  .site-head { --logo-panel-width: 100px; --logo-reserve: 116px; --logo-overhang: 10px; }
+  .logo-panel { padding: 8px 7px 14px; }
   .topbar-link span { font-size: 0.68rem; }
-  .topbar-inner { min-height: 36px; }
   .btn { width: 100%; }
   .hero-actions .btn,
   .assessment-actions .btn { width: 100%; }
@@ -2241,4 +2285,8 @@ button {
   .contact-form-wrap { padding: 24px 20px; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-socials { margin-bottom: 12px; }
+}
+
+@media (max-width: 420px) {
+  .topbar-link[href^="mailto:"] { display: none; }
 }

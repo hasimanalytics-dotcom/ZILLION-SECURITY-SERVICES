@@ -142,6 +142,7 @@ const linkList = (items, className) => `<ul class="${className}">${items.map((it
 
 const header = () => `
 <div class="site-head">
+<a class="logo-panel" href="index.html" aria-label="${brand} home"><img src="assets/zillion-security-services-logo.svg" alt="${brand}"></a>
 <div class="topbar">
   <div class="container topbar-inner">
     <div class="topbar-contact">
@@ -153,7 +154,6 @@ const header = () => `
 </div>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="${brand} home"><img class="brand-logo" src="assets/zillion-security-services-logo.svg" alt="${brand}"></a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <ul class="nav-list">
         <li class="nav-item has-dropdown">
