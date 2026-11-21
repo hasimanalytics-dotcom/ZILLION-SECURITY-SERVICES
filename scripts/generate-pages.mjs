@@ -283,7 +283,6 @@ const heroSection = () => `
       <p class="hero-text">Trained guards, smart systems, and dependable response for businesses across India.</p>
       <div class="hero-actions"><a class="btn btn-primary" href="contact-us.html">Request a Quote ${icon('arrow')}</a><a class="btn btn-ghost" href="services.html">Our Services</a></div>
     </div>
-    <div class="hero-badge reveal delay-2"><img src="assets/Zillion Security Services Shield Logo.png" alt="Zillion shield"><span><strong>Ready when it matters</strong><small>People · Process · Protection</small></span></div>
   </div>
 </section>`
 
