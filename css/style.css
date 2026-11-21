@@ -11,7 +11,7 @@
   --dark: #151c26;
   --dark-2: #202a36;
   --topbar-height: 40px;
-  --nav-height: 72px;
+  --nav-height: 66px;
   --brand-mark-width: 180px;
   --brand-mark-mat: 12px;
   --brand-mark-side: 3px;
@@ -2171,7 +2171,7 @@ button {
 }
 
 @media (max-width: 1020px) {
-  .site-head { --nav-height: 70px; --brand-mark-width: 138px; --brand-mark-mat: 10px; --brand-mark-side: 2px; --logo-reserve: 198px; }
+  .site-head { --nav-height: 64px; --brand-mark-width: 138px; --brand-mark-mat: 10px; --brand-mark-side: 2px; --logo-reserve: 198px; }
   .desktop-nav { display: none; }
   .menu-toggle { display: flex; }
   .header-inner { justify-content: space-between; }
@@ -2190,7 +2190,7 @@ button {
 }
 
 @media (max-width: 760px) {
-  .site-head { --topbar-height: 36px; --nav-height: 60px; --brand-mark-width: 102px; --brand-mark-mat: 8px; --brand-mark-side: 2px; --logo-reserve: 150px; }
+  .site-head { --topbar-height: 36px; --nav-height: 56px; --brand-mark-width: 102px; --brand-mark-mat: 8px; --brand-mark-side: 2px; --logo-reserve: 150px; }
   .container { width: min(100% - 32px, 1240px); }
   .topbar-contact { gap: 16px; }
   .topbar-link { font-size: 0.72rem; }
