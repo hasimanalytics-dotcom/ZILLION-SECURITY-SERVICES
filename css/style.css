@@ -11,10 +11,11 @@
   --dark: #151c26;
   --dark-2: #202a36;
   --topbar-height: 40px;
-  --nav-height: 90px;
+  --nav-height: 78px;
   --brand-mark-width: 180px;
   --brand-mark-mat: 12px;
-  --logo-reserve: 244px;
+  --brand-mark-side: 6px;
+  --logo-reserve: 248px;
   --shadow: 0 18px 45px rgba(21, 28, 38, 0.12);
   --radius: 14px;
 }
@@ -234,8 +235,11 @@ button {
   display: block;
   width: var(--brand-mark-width);
   aspect-ratio: 1182 / 728;
+  box-sizing: content-box;
   overflow: hidden;
   background: var(--white);
+  border-left: var(--brand-mark-side) solid var(--white);
+  border-right: var(--brand-mark-side) solid var(--white);
   box-shadow: 0 0 0 var(--brand-mark-mat) var(--white), 0 0 0 calc(var(--brand-mark-mat) + 1px) rgba(21, 28, 38, 0.1), 0 16px 32px rgba(8, 9, 11, 0.22), 0 3px 10px rgba(8, 9, 11, 0.12);
 }
 
@@ -2181,7 +2185,7 @@ button {
 }
 
 @media (max-width: 1020px) {
-  .site-head { --nav-height: 82px; --brand-mark-width: 138px; --brand-mark-mat: 10px; --logo-reserve: 198px; }
+  .site-head { --nav-height: 74px; --brand-mark-width: 138px; --brand-mark-mat: 10px; --brand-mark-side: 4px; --logo-reserve: 198px; }
   .desktop-nav { display: none; }
   .menu-toggle { display: flex; }
   .header-inner { justify-content: space-between; }
@@ -2200,7 +2204,7 @@ button {
 }
 
 @media (max-width: 760px) {
-  .site-head { --topbar-height: 36px; --nav-height: 70px; --brand-mark-width: 102px; --brand-mark-mat: 8px; --logo-reserve: 150px; }
+  .site-head { --topbar-height: 36px; --nav-height: 64px; --brand-mark-width: 102px; --brand-mark-mat: 8px; --brand-mark-side: 4px; --logo-reserve: 150px; }
   .container { width: min(100% - 32px, 1240px); }
   .topbar-alt { display: none; }
   .topbar-contact { gap: 16px; }
@@ -2235,7 +2239,7 @@ button {
 }
 
 @media (max-width: 520px) {
-  .site-head { --brand-mark-width: 86px; --brand-mark-mat: 6px; --logo-reserve: 130px; }
+  .site-head { --brand-mark-width: 86px; --brand-mark-mat: 6px; --brand-mark-side: 3px; --logo-reserve: 130px; }
   .topbar-link span { font-size: 0.68rem; }
   .btn { width: 100%; }
   .hero-actions .btn,
