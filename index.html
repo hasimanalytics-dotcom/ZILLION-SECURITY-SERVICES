@@ -1,450 +1,252 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zillion Security Services | Professional Security Guard Solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="top-bar">
-      <div class="container">
-        <div class="top-utility">
-          <form class="top-search" action="index.html" method="get" role="search">
-            <input type="search" name="q" aria-label="Search" placeholder="Search..." />
-            <button type="submit" aria-label="Search">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
-            </button>
-          </form>
-          <div class="top-socials">
-            <a href="#" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
-            <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
-            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.88v2.26h3.33l-.53 3.49h-2.8v8.44C19.61 23.08 24 18.09 24 12.07z"/></svg></a>
-            <a href="#" aria-label="X"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.2l-4.9-6.4L6.4 22H3.3l7.3-8.3L2.4 2h6.4l4.4 5.8L18.9 2Zm-1.1 18h1.7L7.5 3.9H5.7L17.8 20Z"/></svg></a>
-            <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.41.69.81.9 1.37.17.42.36 1.05.42 2.22.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.9 3.9 0 0 1-.9 1.38 3.9 3.9 0 0 1-1.38.9c-.42.17-1.05.36-2.22.42-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.9 3.9 0 0 1-1.38-.9 3.9 3.9 0 0 1-.9-1.38c-.17-.42-.36-1.05-.42-2.22C2.17 15.58 2.16 15.2 2.16 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.41-.42.81-.69 1.37-.9.42-.17 1.05-.36 2.22-.42C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.14 4.9.33 4.14.63a5.9 5.9 0 0 0-2.14 1.39A5.9 5.9 0 0 0 .63 4.14C.33 4.9.14 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.78.72 1.44 1.39 2.1a5.9 5.9 0 0 0 2.1 1.4c.76.3 1.64.49 2.91.55C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.78-.3 1.44-.72 2.1-1.39a5.9 5.9 0 0 0 1.4-2.1c.3-.76.49-1.64.55-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.1A5.9 5.9 0 0 0 19.86.63C19.1.33 18.22.14 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.8a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88z"/></svg></a>
-          </div>
-          <div class="contact-quick">
-            <a class="contact-link" href="contact.html">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
-              <span>Contact Us</span>
-            </a>
-            <a class="login-link" href="#">
-              <span>Login</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><path d="m10 17 5-5-5-5"></path><path d="M15 12H3"></path></svg>
-            </a>
-          </div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zillion Security Services | Security Services in India. Zillion Security Services provides trained security teams and practical protection across India.">
+  <title>Zillion Security Services | Security Services in India</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-contact">
+      <a class="topbar-link" href="tel:8005550199"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>(800) 555-0199</span></a>
+      <a class="topbar-link" href="mailto:info@zillionsecurity.in"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@zillionsecurity.in</span></a>
     </div>
-
-    <nav class="navbar">
-      <div class="container">
-        <a href="index.html" class="brand">
-          <img src="assets/zillion-security-services-logo.svg" alt="Zillion Security Services" class="brand-logo" />
-        </a>
-
-        <div class="nav-links">
-          <a href="services.html">Services</a>
-          <a href="industries.html">Industries</a>
-          <a href="index.html#resources">Resources</a>
-          <a href="contact.html#offices">Offices</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html#careers">Careers</a>
-        </div>
-
-        <div class="nav-actions">
-          <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
-        </div>
-      </div>
-      <div class="mobile-menu" id="mobileMenu">
-        <div class="container">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="industries.html">Industries</a>
-        <a href="index.html#resources">Resources</a>
-        <a href="contact.html#offices">Offices</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html#careers">Careers</a>
-        <div class="mobile-phone">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          (800) 555-0199
-        </div>
-      </div>
-    </div>
+    <div class="topbar-alt"><span>Alternate</span> <a href="tel:7498458432">+91 7498458432</a></div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Zillion Security Services home"><img class="brand-logo" src="assets/zillion-security-services-logo.svg" alt="Zillion Security Services"></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li class="nav-item has-dropdown">
+          <button class="nav-link" type="button" data-dropdown-toggle aria-expanded="false">About Us <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="mega mega--small"><div class="mega-inner"><p class="mega-title">Get to know us</p><ul class="mega-links"><li><a href="about-us.html">About Us</a></li><li><a href="about-us.html#vision">Vision &amp; Mission</a></li><li><a href="about-us.html#founder">Founder’s Message</a></li><li><a href="about-us.html#leadership">Leadership Team</a></li><li><a href="certifications-compliance.html">Certifications &amp; Compliance</a></li><li><a href="infrastructure.html">Infrastructure</a></li></ul></div></div>
+        </li>
+        <li class="nav-item has-dropdown">
+          <button class="nav-link" type="button" data-dropdown-toggle aria-expanded="false">Services <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="mega mega--services"><div class="mega-inner">
+            <div class="mega-grid">
+              <div class="mega-column"><p class="mega-title">Guard services</p><ul class="mega-links"><li><a href="service-industrial-security-services.html">Industrial Security Services</a></li><li><a href="service-bank-security-guard-services.html">Bank Security</a></li><li><a href="service-dog-squad.html">Dog Squad</a></li><li><a href="service-commercial-security-services.html">Commercial Security Services</a></li><li><a href="service-residential-security-services.html">Residential Security Services</a></li></ul></div>
+              <div class="mega-column"><p class="mega-title">Risk & response</p><ul class="mega-links"><li><a href="service-event-security-services.html">Special Event Security Services</a></li><li><a href="service-security-consulting-services.html">Security Consultancy</a></li><li><a href="service-physical-security-audit.html">Security Audit</a></li><li><a href="service-vip-security-services.html">Armed Guard Commandos</a></li><li><a href="service-cash-van-services.html">Cash Van Services</a></li></ul></div>
+              <div class="mega-column"><p class="mega-title">Support teams</p><ul class="mega-links"><li><a href="service-electronic-security-systems.html">Electronic Security</a></li><li><a href="service-security-surveillance-services.html">Surveillance</a></li><li><a href="service-facility-attendant-services.html">Facility / Attendant Services</a></li><li><a href="service-housekeeping-manpower-services.html">Housekeeping / Utility Services</a></li><li><a href="service-antecedents-verification.html">Antecedent Verification</a></li></ul></div>
+            </div>
+            <a class="mega-feature" href="services.html"><span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span><strong>Explore all services</strong><small>Protection planned around your site.</small></span><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          </div></div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="network.html">Network</a></li><li class="nav-item"><a class="nav-link" href="operations.html">Operations</a></li><li class="nav-item"><a class="nav-link" href="industries-served.html">Industries We Serve</a></li><li class="nav-item"><a class="nav-link" href="career.html">Career</a></li><li class="nav-item"><a class="nav-link" href="csr.html">CSR</a></li>
+        <li class="nav-item has-dropdown">
+          <button class="nav-link" type="button" data-dropdown-toggle aria-expanded="false">More <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="mega mega--small mega--right"><div class="mega-inner"><p class="mega-title">More from Zillion</p><ul class="mega-links"><li><a href="why-choose-us.html">Why Choose Us</a></li><li><a href="training.html">Training &amp; Orientation</a></li><li><a href="investors.html">Investors</a></li><li><a href="our-clients.html">Our Clients</a></li><li><a href="blog.html">Blog</a></li><li><a href="security-services-mumbai.html">Security Services Mumbai</a></li></ul></div></div>
+        </li>
+      </ul>
     </nav>
+    <div class="header-actions">
+      <a class="contact-btn" href="contact-us.html">Contact Us <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <div class="mobile-nav-inner">
+      <div class="mobile-nav-head"><span>Menu</span><a href="tel:8005550199">(800) 555-0199</a></div>
+      <a class="mobile-link" href="index.html">Home</a>
+      <details class="mobile-group"><summary>About Us <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="mobile-group-content"><ul class="mobile-sublinks"><li><a href="about-us.html">About Us</a></li><li><a href="about-us.html#vision">Vision &amp; Mission</a></li><li><a href="about-us.html#founder">Founder’s Message</a></li><li><a href="about-us.html#leadership">Leadership Team</a></li><li><a href="certifications-compliance.html">Certifications &amp; Compliance</a></li><li><a href="infrastructure.html">Infrastructure</a></li></ul></div></details>
+      <details class="mobile-group"><summary>Services <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="mobile-group-content"><ul class="mobile-sublinks"><li><a href="service-industrial-security-services.html">Industrial Security Services</a></li><li><a href="service-bank-security-guard-services.html">Bank Security</a></li><li><a href="service-dog-squad.html">Dog Squad</a></li><li><a href="service-commercial-security-services.html">Commercial Security Services</a></li><li><a href="service-residential-security-services.html">Residential Security Services</a></li><li><a href="service-event-security-services.html">Special Event Security Services</a></li><li><a href="service-security-consulting-services.html">Security Consultancy</a></li><li><a href="service-physical-security-audit.html">Security Audit</a></li><li><a href="service-vip-security-services.html">Armed Guard Commandos</a></li><li><a href="service-cash-van-services.html">Cash Van Services</a></li><li><a href="service-electronic-security-systems.html">Electronic Security</a></li><li><a href="service-security-surveillance-services.html">Surveillance</a></li><li><a href="service-facility-attendant-services.html">Facility / Attendant Services</a></li><li><a href="service-housekeeping-manpower-services.html">Housekeeping / Utility Services</a></li><li><a href="service-antecedents-verification.html">Antecedent Verification</a></li></ul></div></details>
+      <a class="mobile-link" href="network.html">Network</a><a class="mobile-link" href="operations.html">Operations</a><a class="mobile-link" href="industries-served.html">Industries We Serve</a><a class="mobile-link" href="career.html">Career</a><a class="mobile-link" href="csr.html">CSR</a>
+      <details class="mobile-group"><summary>More <svg class="icon caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="mobile-group-content"><ul class="mobile-sublinks"><li><a href="why-choose-us.html">Why Choose Us</a></li><li><a href="training.html">Training &amp; Orientation</a></li><li><a href="investors.html">Investors</a></li><li><a href="our-clients.html">Our Clients</a></li><li><a href="blog.html">Blog</a></li><li><a href="security-services-mumbai.html">Security Services Mumbai</a></li></ul></div></details>
+      <div class="mobile-meta"><a href="mailto:info@zillionsecurity.in">info@zillionsecurity.in</a><span>+91 7498458432</span></div>
+      <a class="btn btn-primary mobile-cta" href="contact-us.html">Contact Us <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+  </nav>
+</header>
+<main>
 
-    <!-- HERO -->
-    <section class="hero hero-aus animate">
-      <div class="hero-aus-grid">
-        <div class="hero-aus-copy animate delay-2">
-          <h1>Local execution,<br />unparalleled global<br />resources</h1>
-        </div>
-        <div class="hero-aus-media animate-zoom delay-1">
-          <img src="assets/hero.png" alt="Security professional providing guard services" />
-          <div class="hero-aus-overlay">
-            <span>Ready for</span>
-            <span>what's next</span>
-          </div>
+<section class="hero" id="top">
+  <div class="hero-media"><img class="hero-poster" src="assets/hero.png" alt="Security professional on duty"><div class="hero-shade"></div></div>
+  <div class="container hero-inner">
+    <div class="hero-content reveal">
+      <p class="eyebrow">Zillion Security Services</p>
+      <h1 class="hero-title">Protection you can plan around.</h1>
+      <p class="hero-text">Trained guards, smart systems, and dependable response for businesses across India.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="contact-us.html">Request a Quote <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a><a class="btn btn-ghost" href="services.html">Our Services</a></div>
+    </div>
+    <div class="hero-badge reveal delay-2"><img src="assets/Zillion Security Services Shield Logo.png" alt="Zillion shield"><span><strong>Ready when it matters</strong><small>People · Process · Protection</small></span></div>
+  </div>
+</section>
+<section class="section overview" id="overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-copy reveal">
+        <p class="section-kicker">An Overview</p>
+        <h2 class="section-title">Simple, disciplined security that scales with you.</h2>
+        <p class="section-lead">We combine well-trained teams with clear reporting and practical technology. The result is a security programme your people can trust every day.</p>
+        <p class="section-text">From a single entrance to a multi-site rollout, our supervisors stay close to the detail: who is on duty, what changed, and what happens next.</p>
+        <a class="read-link" href="about-us.html">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </div>
+      <div class="overview-media reveal delay-1">
+        <div class="portrait-card"><img class="portrait-img" src="assets/Zillion Security Services Shield Logo.png" alt="Zillion Security Services emblem"><div class="portrait-caption"><strong>Our founding principle</strong><span>Discipline. Integrity. Readiness.</span></div></div>
+      </div>
+    </div>
+    <div class="stats-grid"><div class="stat reveal delay-1"><div class="stat-number"><span class="counter" data-count="15">0</span>+</div><p class="stat-label">Experience</p><p class="stat-desc">Years of service</p></div><div class="stat reveal delay-2"><div class="stat-number"><span class="counter" data-count="2500">0</span>+</div><p class="stat-label">People</p><p class="stat-desc">Trained professionals</p></div><div class="stat reveal delay-3"><div class="stat-number"><span class="counter" data-count="120">0</span>+</div><p class="stat-label">Reach</p><p class="stat-desc">Locations supported</p></div><div class="stat reveal delay-4"><div class="stat-number"><span class="counter" data-count="600">0</span>+</div><p class="stat-label">Clients</p><p class="stat-desc">Organisations protected</p></div></div>
+  </div>
+</section>
+<section class="section services-section" id="security-services">
+  <div class="container">
+    <div class="slider-header reveal"><div><p class="section-kicker">What we do</p><h2 class="section-title">Comprehensive Security Services</h2><p class="section-lead">Professional protection planned for businesses, industries, and communities.</p></div><a class="read-link" href="services.html">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+  </div>
+  <div class="container slider-shell reveal delay-1">
+    <div class="slider-top"><p class="slider-hint">Drag or use the arrows to explore</p><div class="slider-controls"><button class="slider-btn" type="button" data-slider-prev aria-label="Previous services"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button><button class="slider-btn" type="button" data-slider-next aria-label="Next services"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div></div>
+    <div class="slider-track" data-slider tabindex="0" aria-label="Security services carousel">
+      <article class="service-slide"><a class="service-card" href="service-industrial-security-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></span></div><div class="service-body"><span class="service-index">01</span><h3 class="service-name">Industrial Security Services</h3><p class="service-desc">Controlled access, patrols, and safe site movement for plants and warehouses.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-bank-security-guard-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-6 9 6M5 10v9m5-9v9m4-9v9m5-9v9M3 21h18"/></svg></span></div><div class="service-body"><span class="service-index">02</span><h3 class="service-name">Bank Security</h3><p class="service-desc">Customer-area presence, cash-point coverage, and calm incident handling.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-dog-squad.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span></div><div class="service-body"><span class="service-index">03</span><h3 class="service-name">Dog Squad</h3><p class="service-desc">Trained canine teams for detection, screening, and perimeter checks.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-commercial-security-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M16 9h3a1 1 0 0 1 1 1v11M2 21h20"/><path d="M8 7h4M8 11h4M8 15h4"/></svg></span></div><div class="service-body"><span class="service-index">04</span><h3 class="service-name">Commercial Security Services</h3><p class="service-desc">Front-desk protection and round-the-clock cover for business premises.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-residential-security-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span></div><div class="service-body"><span class="service-index">05</span><h3 class="service-name">Residential Security Services</h3><p class="service-desc">Gate management and resident-first safety for housing communities.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-event-security-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></span></div><div class="service-body"><span class="service-index">06</span><h3 class="service-name">Special Event Security Services</h3><p class="service-desc">Crowd flow, ticketing checks, and rapid response for live events.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-security-consulting-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span></div><div class="service-body"><span class="service-index">07</span><h3 class="service-name">Security Consultancy</h3><p class="service-desc">Practical risk advice shaped around your site, people, and budget.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-physical-security-audit.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span></div><div class="service-body"><span class="service-index">08</span><h3 class="service-name">Security Audit</h3><p class="service-desc">On-site reviews that highlight gaps and prioritise quick improvements.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-vip-security-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span></div><div class="service-body"><span class="service-index">09</span><h3 class="service-name">Armed Guard Commandos</h3><p class="service-desc">Close protection details for high-profile people and sensitive travel.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-cash-van-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v11H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span></div><div class="service-body"><span class="service-index">10</span><h3 class="service-name">Cash Van Services</h3><p class="service-desc">Planned, monitored cash movement with trained escort crews.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-electronic-security-systems.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span></div><div class="service-body"><span class="service-index">11</span><h3 class="service-name">Electronic Security</h3><p class="service-desc">Access control, alarms, and devices integrated into daily operations.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-security-surveillance-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/></svg></span></div><div class="service-body"><span class="service-index">12</span><h3 class="service-name">Surveillance</h3><p class="service-desc">Visible deterrence and monitored coverage across critical zones.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-facility-attendant-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0v5a2 2 0 0 1-2 2h-3v-7h5M4 13v5a2 2 0 0 0 2 2h3v-7H4"/></svg></span></div><div class="service-body"><span class="service-index">13</span><h3 class="service-name">Facility / Attendant Services</h3><p class="service-desc">Trained attendants who keep entrances, lifts, and facilities running.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-housekeeping-manpower-services.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2 6 6 2-6 2-2 6-2-6-6-2 6-2zM19 16l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"/></svg></span></div><div class="service-body"><span class="service-index">14</span><h3 class="service-name">Housekeeping / Utility Services</h3><p class="service-desc">Reliable support teams for clean, orderly, and safe environments.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article><article class="service-slide"><a class="service-card" href="service-antecedents-verification.html"><div class="service-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="service-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span></div><div class="service-body"><span class="service-index">15</span><h3 class="service-name">Antecedent Verification</h3><p class="service-desc">Structured background checks that support confident hiring decisions.</p><span class="service-link">View service <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></article>
+    </div>
+    <div class="slider-progress"><span class="slider-progress-bar"></span></div>
+  </div>
+</section>
+<section class="section industries-section" id="industries">
+  <div class="container">
+    <div class="slider-header reveal"><div><p class="section-kicker">Sectors we support</p><h2 class="section-title">Industries We Serve</h2><p class="section-lead">Scalable cover shaped around the risks and routines of each sector.</p></div><a class="read-link" href="industries-served.html">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+    <div class="industry-grid"><article class="industry-card reveal delay-1"><div class="industry-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-6 9 6M5 10v9m5-9v9m4-9v9m5-9v9M3 21h18"/></svg></div><h3 class="industry-name">Banking &amp; Finance</h3><p class="industry-desc">Protecting branches, teams, customers, and high-value movements.</p></article><article class="industry-card reveal delay-2"><div class="industry-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M16 9h3a1 1 0 0 1 1 1v11M2 21h20"/><path d="M8 7h4M8 11h4M8 15h4"/></svg></div><h3 class="industry-name">Corporates</h3><p class="industry-desc">Access, reception, and floor-level cover for modern workplaces.</p></article><article class="industry-card reveal delay-3"><div class="industry-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3M4 8h16v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M12 11v6M9 14h6"/></svg></div><h3 class="industry-name">Medical &amp; Pharma</h3><p class="industry-desc">Safety for hospitals, labs, clean rooms, and supply chains.</p></article><article class="industry-card reveal delay-4"><div class="industry-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></div><h3 class="industry-name">Media &amp; Entertainment</h3><p class="industry-desc">Set, studio, and event protection with minimal disruption.</p></article><article class="industry-card reveal delay-1"><div class="industry-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1-5H5zM4 9v11h16V9M9 20v-6h6v6"/></svg></div><h3 class="industry-name">Retail Stores</h3><p class="industry-desc">Loss prevention and a reassuring presence on the shop floor.</p></article><article class="industry-card reveal delay-2"><div class="industry-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h6v16z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></div><h3 class="industry-name">Manufacturing</h3><p class="industry-desc">Perimeter discipline and shift-based cover for production sites.</p></article><article class="industry-card reveal delay-3"><div class="industry-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4 20h16L14 9V3"/><path d="M7 15h10"/></svg></div><h3 class="industry-name">Chemical Industry</h3><p class="industry-desc">Controlled entry and safety-first patrols for restricted zones.</p></article><article class="industry-card reveal delay-4"><div class="industry-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h3l2.5 12h11L21 7H6"/></svg></div><h3 class="industry-name">E-Commerce</h3><p class="industry-desc">Warehouse and dispatch security that keeps orders moving.</p></article></div>
+  </div>
+</section>
+<section class="operations-section" id="operations">
+  <div class="container operations-grid">
+    <div class="operations-copy reveal">
+      <p class="section-kicker section-kicker--light">Operations</p>
+      <h2 class="section-title section-title--light">Smart oversight, steady execution.</h2>
+      <p class="section-lead section-lead--light">Surveillance, monitoring, and real-time reporting work together so problems are seen early and handled calmly.</p>
+      <div class="feature-list">
+        <div class="feature-item"><span class="feature-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/></svg></span><div><h3>Smart Surveillance</h3><p>Visible coverage where it counts.</p></div></div>
+        <div class="feature-item"><span class="feature-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><h3>Command & Control</h3><p>One clear view across your sites.</p></div></div>
+        <div class="feature-item"><span class="feature-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19a10 10 0 0 1 0-14"/></svg></span><div><h3>Remote Monitoring</h3><p>Support beyond working hours.</p></div></div>
+        <div class="feature-item"><span class="feature-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span><div><h3>Real-Time Reporting</h3><p>Updates your team can act on.</p></div></div>
+      </div>
+      <a class="btn btn-outline-light" href="operations.html">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="operations-visual reveal delay-2"><div class="visual-frame"><img src="assets/hero.png" alt="Security operations"><span class="visual-chip">Operations desk</span><span class="visual-label">Monitor · Respond · Report</span></div></div>
+  </div>
+</section><section class="section why-section" id="why-us"><div class="container"><div class="slider-header reveal"><div><p class="section-kicker">Why choose us</p><h2 class="section-title">The details make the difference.</h2><p class="section-lead">Experience, technology, and disciplined execution in one dependable service.</p></div><a class="read-link" href="why-choose-us.html">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div><div class="why-grid"><article class="why-card reveal delay-1"><span class="why-number">01</span><span class="why-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><h3 class="why-title">Trained Workforce</h3><p class="why-desc">Structured induction and regular refreshers.</p></article><article class="why-card reveal delay-2"><span class="why-number">02</span><span class="why-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 9 5-3 5 3-1.5-9"/></svg></span><h3 class="why-title">Compliance-Driven</h3><p class="why-desc">Clear checks, records, and site documentation.</p></article><article class="why-card reveal delay-3"><span class="why-number">03</span><span class="why-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><h3 class="why-title">Technology-Enabled</h3><p class="why-desc">Tools that support guards, not replace judgement.</p></article><article class="why-card reveal delay-4"><span class="why-number">04</span><span class="why-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3 class="why-title">Fast Deployment</h3><p class="why-desc">A dependable team in place on schedule.</p></article></div></div></section>
+<section class="section clients-section" id="clients">
+  <div class="container">
+    <div class="slider-header reveal"><div><p class="section-kicker">Our clients</p><h2 class="section-title">Trusted across many sectors.</h2><p class="section-lead">Serving organisations with consistency, care, and reliable reporting.</p></div><a class="read-link" href="our-clients.html">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+    <div class="clients-grid"><div class="client-tile reveal delay-1"><span class="client-mark">AF</span><span class="client-name">Apex Financial</span></div><div class="client-tile reveal delay-2"><span class="client-mark">NL</span><span class="client-name">Northstar Labs</span></div><div class="client-tile reveal delay-3"><span class="client-mark">MH</span><span class="client-name">Meridian Homes</span></div><div class="client-tile reveal delay-4"><span class="client-mark">OR</span><span class="client-name">Orbit Retail</span></div><div class="client-tile reveal delay-1"><span class="client-mark">CH</span><span class="client-name">Crest Hospital</span></div><div class="client-tile reveal delay-2"><span class="client-mark">VL</span><span class="client-name">Vertex Logistics</span></div><div class="client-tile reveal delay-3"><span class="client-mark">BM</span><span class="client-name">Bluewave Media</span></div><div class="client-tile reveal delay-4"><span class="client-mark">SF</span><span class="client-name">Summit Foods</span></div><div class="client-tile reveal delay-1"><span class="client-mark">PW</span><span class="client-name">Prime Workspace</span></div><div class="client-tile reveal delay-2"><span class="client-mark">HT</span><span class="client-name">Harbour Trade</span></div><div class="client-tile reveal delay-3"><span class="client-mark">ZC</span><span class="client-name">Zenith Care</span></div><div class="client-tile reveal delay-4"><span class="client-mark">CM</span><span class="client-name">Core Manufacturing</span></div></div>
+  </div>
+</section>
+<section class="network-section" id="network">
+  <div class="container network-grid">
+    <div class="network-copy reveal">
+      <p class="section-kicker">Our network</p>
+      <h2 class="section-title">Local teams, connected nationwide.</h2>
+      <p class="section-lead">Our branch network brings hiring, training, supervision, and support closer to every client we serve.</p>
+      <div class="network-stats"><div class="network-stat"><span class="network-stat-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5z"/><path d="M6 10v6c0 2 2.7 3.5 6 3.5s6-1.5 6-3.5v-6M22 8v6"/></svg></span><strong>3</strong><span>Training hubs</span></div><div class="network-stat"><span class="network-stat-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><strong>18+</strong><span>States covered</span></div><div class="network-stat"><span class="network-stat-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M16 9h3a1 1 0 0 1 1 1v11M2 21h20"/><path d="M8 7h4M8 11h4M8 15h4"/></svg></span><strong>120+</strong><span>Service locations</span></div><div class="network-stat"><span class="network-stat-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><strong>2.5K+</strong><span>Field personnel</span></div></div>
+      <div class="office-list"><div class="office-item"><h3 class="office-name">Head Office</h3><p class="office-text">101, Omega House, Hiranandani Gardens, Powai, Mumbai - 400 076, Maharashtra.</p><a href="tel:8005550199">(800) 555-0199</a></div><div class="office-item"><h3 class="office-name">Western Region</h3><p class="office-text">Andheri, Mumbai - 400 053, Maharashtra.</p><a href="tel:8005550199">(800) 555-0199</a></div><div class="office-item"><h3 class="office-name">Northern Region</h3><p class="office-text">Connaught Place, New Delhi - 110 001, Delhi.</p><a href="tel:8005550199">(800) 555-0199</a></div><div class="office-item"><h3 class="office-name">Southern Region</h3><p class="office-text">Indiranagar, Bengaluru - 560 038, Karnataka.</p><a href="tel:8005550199">(800) 555-0199</a></div></div>
+      <a class="read-link" href="network.html">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="map-panel reveal delay-2">
+<svg class="map-svg" viewBox="0 0 620 380" role="img" aria-label="Illustrated service network map">
+  <rect width="620" height="380" rx="18" fill="#f4f6f8"/>
+  <path d="M0 80h620M0 160h620M0 240h620M0 320h620M100 0v380M210 0v380M320 0v380M430 0v380M540 0v380" stroke="#e3e7eb" stroke-width="1"/>
+  <path d="M95 285 180 230 255 250 330 160 430 190 520 100" fill="none" stroke="#c9ced4" stroke-width="2" stroke-dasharray="6 7"/>
+  <path d="M180 230 230 130 380 110 520 100" fill="none" stroke="#d8c6c6" stroke-width="2" stroke-dasharray="6 7"/>
+  <path d="M255 250 380 300 470 260 520 100" fill="none" stroke="#c9ced4" stroke-width="2" stroke-dasharray="6 7"/>
+  <circle cx="330" cy="160" r="7" fill="#a4262c"/><circle cx="180" cy="230" r="5" fill="#a4262c"/><circle cx="430" cy="190" r="5" fill="#a4262c"/><circle cx="520" cy="100" r="5" fill="#a4262c"/><circle cx="255" cy="250" r="5" fill="#a4262c"/><circle cx="470" cy="260" r="5" fill="#a4262c"/><circle cx="230" cy="130" r="5" fill="#a4262c"/>
+  <text x="345" y="155" fill="#1f2733" font-size="14" font-family="Manrope, sans-serif">Mumbai</text>
+  <text x="190" y="252" fill="#1f2733" font-size="13" font-family="Manrope, sans-serif">Pune</text>
+  <text x="444" y="194" fill="#1f2733" font-size="13" font-family="Manrope, sans-serif">Hyderabad</text>
+  <text x="533" y="98" fill="#1f2733" font-size="13" font-family="Manrope, sans-serif">Delhi</text>
+  <text x="270" y="268" fill="#1f2733" font-size="13" font-family="Manrope, sans-serif">Goa</text>
+  <text x="484" y="278" fill="#1f2733" font-size="13" font-family="Manrope, sans-serif">Chennai</text>
+  <text x="244" y="122" fill="#1f2733" font-size="13" font-family="Manrope, sans-serif">Ahmedabad</text>
+</svg><div class="map-callout"><span class="map-callout-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><strong>101, Omega House, Hiranandani Gardens, Powai, Mumbai - 400 076, Maharashtra.</strong><span>info@zillionsecurity.in</span></div></div></div>
+  </div>
+</section>
+<section class="join-section" id="careers">
+  <div class="container join-grid">
+    <div class="join-copy reveal"><p class="section-kicker section-kicker--light">Join Our Team</p><h2 class="section-title section-title--light">Build a career that protects people.</h2><p class="section-lead section-lead--light">We offer structured training, clear progression, and a team that takes pride in showing up prepared.</p><a class="btn btn-outline-light" href="career.html">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
+    <div class="join-collage reveal delay-2"><div class="collage-main"><img src="assets/hero.png" alt="Security team member"></div><div class="collage-small"><img src="assets/Zillion Security Services Shield Logo.png" alt="Zillion shield"></div><div class="collage-note"><strong>Join a team that protects with pride.</strong><span>Growth · Training · Purpose</span></div></div>
+  </div>
+</section>
+<section class="section insights-section" id="insights">
+  <div class="container"><div class="slider-header reveal"><div><p class="section-kicker">News & causes</p><h2 class="section-title">Ideas worth sharing.</h2></div></div>
+    <div class="insight-grid"><a class="insight-card reveal delay-1" href="csr.html"><div class="insight-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="insight-tag">CSR</span></div><div class="insight-body"><h3 class="insight-title">Safety skills for every neighbourhood</h3><p>How community workshops help people respond calmly in an emergency.</p><span class="insight-link">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a><a class="insight-card reveal delay-2" href="blog.html"><div class="insight-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="insight-tag">Blog</span></div><div class="insight-body"><h3 class="insight-title">Choosing a guard partner that fits your site</h3><p>A short checklist for comparing providers before you sign an agreement.</p><span class="insight-link">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a><a class="insight-card reveal delay-3" href="blog.html"><div class="insight-media"><img src="assets/hero.png" alt="" loading="lazy"><span class="insight-tag">Blog</span></div><div class="insight-body"><h3 class="insight-title">Five everyday habits that improve workplace safety</h3><p>Small, repeatable actions that make a visible difference each shift.</p><span class="insight-link">Read More <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div></a></div>
+  </div>
+</section>
+<section class="assessment-section" id="assessment">
+  <div class="container assessment-inner reveal">
+    <div class="assessment-copy"><span class="assessment-icon"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2 6 6 2-6 2-2 6-2-6-6-2 6-2zM19 16l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"/></svg></span><h2>Get Free Security Assessment</h2><p>Our team reviews your site, highlights risks, and recommends a practical next step.</p></div>
+    <div class="assessment-actions"><a class="btn btn-light" href="contact-us.html">Talk to an Expert <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a><button class="btn btn-outline-light" type="button" data-modal-open>Enquire Now</button></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-column footer-about">
+        <a class="footer-brand" href="index.html"><img src="assets/zillion-security-services-logo.svg" alt="Zillion Security Services"></a>
+        <p>Dependable people, clear processes, and security that fits the way you work.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">yt</a><a href="#" aria-label="Instagram">ig</a>
         </div>
       </div>
-    </section>
-
-    <!-- VALUE CARDS -->
-    <section class="section">
-      <div class="container">
-        <div class="value-grid">
-          <div class="value-card animate delay-1">
-            <div class="media"><img src="assets/hero.png?seed=aus-val1/600/400" alt="Shaping the Future" /></div>
-            <h3>Shaping the Future</h3>
-            <p>This is demo text. You can replace it here. Our vision is simple: be the most trusted security provider in a world of evolving risk.</p>
-            <a href="contact.html" class="btn btn-outline" style="margin-top:16px;">Contact Us</a>
-          </div>
-          <div class="value-card animate delay-2">
-            <div class="media"><img src="assets/hero.png?seed=aus-val2/600/400" alt="The Most Local" /></div>
-            <h3>The Most Local</h3>
-            <p>This is demo text. You can replace it here. With branches across the region, our local teams are backed by recruiting, training, and operations.</p>
-            <a href="contact.html" class="btn btn-outline" style="margin-top:16px;">Locations</a>
-          </div>
-          <div class="value-card animate delay-3">
-            <div class="media"><img src="assets/hero.png?seed=aus-val3/600/400" alt="Join our Team" /></div>
-            <h3>Join our Team</h3>
-            <p>This is demo text. You can replace it here. Explore opportunities to grow your skills and support the communities that count on us.</p>
-            <a href="contact.html#careers" class="btn btn-outline" style="margin-top:16px;">Careers</a>
-          </div>
-        </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">About Us</h2>
+        <ul class="footer-links"><li><a href="about-us.html">About Us</a></li><li><a href="about-us.html#vision">Vision &amp; Mission</a></li><li><a href="about-us.html#founder">Founder’s Message</a></li><li><a href="about-us.html#leadership">Leadership Team</a></li><li><a href="certifications-compliance.html">Certifications &amp; Compliance</a></li><li><a href="infrastructure.html">Infrastructure</a></li></ul>
       </div>
-    </section>
-
-    <!-- SCALABLE SOLUTIONS -->
-    <section class="section" style="background:var(--bg-light);">
-      <div class="container">
-        <div class="animate" style="text-align:center; margin-bottom:48px;">
-          <span class="demo-tag">End-to-End</span>
-          <h2 class="section-title" style="margin-bottom:12px;">Scalable, End-to-End Solutions</h2>
-          <p class="section-subtitle" style="margin-bottom:0;">This is demo text. You can replace it here. Combining security services, technology, executive protection and canine services, event security, and facility maintenance.</p>
-        </div>
-        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-          <div class="service-media-card animate delay-1">
-            <div class="media"><img src="assets/hero.png?seed=sp/600/400" alt="Security Professionals" /></div>
-            <div class="body">
-              <h3>Security Professionals</h3>
-              <p>This is demo text. You can replace it here with a short description of this service.</p>
-              <a href="services.html" class="btn btn-outline">Learn More</a>
-            </div>
-          </div>
-          <div class="service-media-card animate delay-2">
-            <div class="media"><img src="assets/hero.png?seed=eps/600/400" alt="Enhanced Protection Services" /></div>
-            <div class="body">
-              <h3>Enhanced Protection Services</h3>
-              <p>This is demo text. You can replace it here with a short description of this service.</p>
-              <a href="services.html" class="btn btn-outline">Learn More</a>
-            </div>
-          </div>
-          <div class="service-media-card animate delay-3">
-            <div class="media"><img src="assets/hero.png?seed=its/600/400" alt="Integrated Technology Services" /></div>
-            <div class="body">
-              <h3>Integrated Technology Services</h3>
-              <p>This is demo text. You can replace it here with a short description of this service.</p>
-              <a href="services.html" class="btn btn-outline">Learn More</a>
-            </div>
-          </div>
-          <div class="service-media-card animate delay-4">
-            <div class="media"><img src="assets/hero.png?seed=es/600/400" alt="Event Services" /></div>
-            <div class="body">
-              <h3>Event Services</h3>
-              <p>This is demo text. You can replace it here with a short description of this service.</p>
-              <a href="services.html" class="btn btn-outline">Learn More</a>
-            </div>
-          </div>
-          <div class="service-media-card animate delay-5">
-            <div class="media"><img src="assets/hero.png?seed=ps/600/400" alt="Professional Services" /></div>
-            <div class="body">
-              <h3>Professional Services</h3>
-              <p>This is demo text. You can replace it here with a short description of this service.</p>
-              <a href="services.html" class="btn btn-outline">Learn More</a>
-            </div>
-          </div>
-          <div class="service-media-card animate delay-6">
-            <div class="media"><img src="assets/hero.png?seed=js/600/400" alt="Janitorial Services" /></div>
-            <div class="body">
-              <h3>Janitorial Services</h3>
-              <p>This is demo text. You can replace it here with a short description of this service.</p>
-              <a href="services.html" class="btn btn-outline">Learn More</a>
-            </div>
-          </div>
-        </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">Services</h2>
+        <ul class="footer-links"><li><a href="service-industrial-security-services.html">Industrial Security Services</a></li><li><a href="service-bank-security-guard-services.html">Bank Security</a></li><li><a href="service-dog-squad.html">Dog Squad</a></li><li><a href="service-commercial-security-services.html">Commercial Security Services</a></li><li><a href="service-residential-security-services.html">Residential Security Services</a></li><li><a href="service-event-security-services.html">Special Event Security Services</a></li><li><a href="service-security-consulting-services.html">Security Consultancy</a></li><li><a href="service-physical-security-audit.html">Security Audit</a></li></ul>
       </div>
-    </section>
-
-    <!-- SECURITY INSIGHTS -->
-    <section class="section">
-      <div class="container">
-        <div class="insight-grid">
-          <div class="insight-text animate-left">
-            <span class="demo-tag">Insights & Resources</span>
-            <h2>Security Insights and Resources</h2>
-            <p>This is demo text. You can replace it here. Stay informed with security industry insights, research and resources. Explore the latest reports, eBooks, success stories, and webinars covering emerging security trends.</p>
-            <a href="#" class="btn btn-primary">Explore Our Resources</a>
-          </div>
-          <div class="insight-media animate-right">
-            <img src="assets/hero.png?seed=insights/800/500" alt="Security resources" />
-          </div>
-        </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">More Services</h2>
+        <ul class="footer-links"><li><a href="service-vip-security-services.html">Armed Guard Commandos</a></li><li><a href="service-cash-van-services.html">Cash Van Services</a></li><li><a href="service-electronic-security-systems.html">Electronic Security</a></li><li><a href="service-security-surveillance-services.html">Surveillance</a></li><li><a href="service-facility-attendant-services.html">Facility / Attendant Services</a></li><li><a href="service-housekeeping-manpower-services.html">Housekeeping / Utility Services</a></li><li><a href="service-antecedents-verification.html">Antecedent Verification</a></li></ul>
       </div>
-    </section>
-
-    <!-- EXPERTISE -->
-    <section class="section" style="background:var(--bg-light);">
-      <div class="container">
-        <div class="animate" style="text-align:center; margin-bottom:48px;">
-          <span class="demo-tag">Expertise</span>
-          <h2 class="section-title" style="margin-bottom:12px;">Expertise That Makes a Difference</h2>
-          <p class="section-subtitle" style="margin-bottom:0;">This is demo text. You can replace it here.</p>
-        </div>
-        <div class="expertise-grid">
-          <div class="expertise-card animate delay-1">
-            <img src="assets/hero.png?seed=exp1/600/400" alt="Security Services" />
-            <div class="overlay"><h4>Security Services</h4><p>This is demo text. You can replace it here.</p></div>
-          </div>
-          <div class="expertise-card animate delay-2">
-            <img src="assets/hero.png?seed=exp2/600/400" alt="Enhanced Protection Services" />
-            <div class="overlay"><h4>Enhanced Protection Services</h4><p>This is demo text. You can replace it here.</p></div>
-          </div>
-          <div class="expertise-card animate delay-3">
-            <img src="assets/hero.png?seed=exp3/600/400" alt="Facility Solutions" />
-            <div class="overlay"><h4>Facility Solutions</h4><p>This is demo text. You can replace it here.</p></div>
-          </div>
-          <div class="expertise-card animate delay-4">
-            <img src="assets/hero.png?seed=exp4/600/400" alt="Event Services" />
-            <div class="overlay"><h4>Event Services</h4><p>This is demo text. You can replace it here.</p></div>
-          </div>
-          <div class="expertise-card animate delay-5">
-            <img src="assets/hero.png?seed=exp5/600/400" alt="Integrated Technology Solutions" />
-            <div class="overlay"><h4>Integrated Technology Solutions</h4><p>This is demo text. You can replace it here.</p></div>
-          </div>
-        </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">Company</h2>
+        <ul class="footer-links"><li><a href="why-choose-us.html">Why Choose Us</a></li><li><a href="operations.html">Operations</a></li><li><a href="network.html">Network</a></li><li><a href="industries-served.html">Industries We Serve</a></li><li><a href="our-clients.html">Our Clients</a></li><li><a href="career.html">Career</a></li><li><a href="csr.html">CSR</a></li><li><a href="investors.html">Investors</a></li><li><a href="blog.html">Blog</a></li><li><a href="sitemap.html">Sitemap</a></li></ul>
       </div>
-    </section>
-
-    <!-- STABILITY -->
-    <section class="section">
-      <div class="container">
-        <div class="stability-grid">
-          <div class="animate-left">
-            <span class="demo-tag">Our Story</span>
-            <h2 style="font-size:2rem; font-weight:700; color:var(--primary); margin-bottom:16px;">Stability That Inspires Confidence</h2>
-            <p style="color:var(--text-muted); line-height:1.7; margin-bottom:16px;">This is demo text. You can replace it here. For more than 65 years, our company has continued to evolve, expanding capabilities across technology, enhanced protection, and facility solutions.</p>
-            <p style="color:var(--text-muted); line-height:1.7;">This is demo text. You can replace it here. Today, our local teams are backed by global resources, giving organizations the expertise they need today and the preparedness for what comes next.</p>
-          </div>
-          <div class="stability-media animate-right">
-            <img src="assets/hero.png?seed=stability/800/500" alt="Stability" />
-          </div>
-        </div>
+      <div class="footer-column footer-contact">
+        <h2 class="footer-heading">Contact</h2>
+        <p class="footer-label">Head Office</p><p>101, Omega House, Hiranandani Gardens, Powai, Mumbai - 400 076, Maharashtra.</p>
+        <p class="footer-label">Email</p><p><a href="mailto:info@zillionsecurity.in">info@zillionsecurity.in</a></p>
+        <p class="footer-label">Phone</p><p><a href="tel:8005550199">(800) 555-0199</a><br><a href="tel:7498458432">+91 7498458432</a></p>
+        <a class="footer-enquire" href="#enquiry" data-modal-open>Enquire Now <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
       </div>
-    </section>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© <span data-year></span> Zillion Security Services. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="sitemap.html">Sitemap</a><a href="contact-us.html">Contact Us</a></div>
+    </div>
+  </div>
+</footer>
 
-    <!-- RECENT RESOURCES -->
-    <section id="resources" class="section" style="background:var(--bg-light);">
-      <div class="container">
-        <div class="animate" style="text-align:center; margin-bottom:48px;">
-          <span class="demo-tag">Resources</span>
-          <h2 class="section-title" style="margin-bottom:12px;">Recent Resources</h2>
-          <p class="section-subtitle" style="margin-bottom:0;">This is demo text. You can replace it here.</p>
-        </div>
-        <div class="resource-grid">
-          <div class="resource-card animate delay-1">
-            <div class="media"><img src="assets/hero.png?seed=res1/600/400" alt="World Security Report" /></div>
-            <div class="body"><span class="tag">Report</span><h4>World Security Report</h4><p>This is demo text. You can replace it here.</p><a href="#" class="btn btn-outline" style="padding:8px 16px; font-size:0.85rem;">Read the Report</a></div>
-          </div>
-          <div class="resource-card animate delay-2">
-            <div class="media"><img src="assets/hero.png?seed=res2/600/400" alt="Resilience Planning Guide" /></div>
-            <div class="body"><span class="tag">eBook</span><h4>Resilience Planning Guide</h4><p>This is demo text. You can replace it here.</p><a href="#" class="btn btn-outline" style="padding:8px 16px; font-size:0.85rem;">Get the eBook</a></div>
-          </div>
-          <div class="resource-card animate delay-3">
-            <div class="media"><img src="assets/hero.png?seed=res3/600/400" alt="Value of Security" /></div>
-            <div class="body"><span class="tag">eBook</span><h4>Value of Security eBook</h4><p>This is demo text. You can replace it here.</p><a href="#" class="btn btn-outline" style="padding:8px 16px; font-size:0.85rem;">Get the eBook</a></div>
-          </div>
-        </div>
+<div class="modal" id="enquiryModal" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="enquiryTitle">
+    <button class="modal-close" type="button" data-modal-close aria-label="Close enquiry form">×</button>
+    <p class="section-kicker">Enquire Now</p>
+    <h2 class="section-title" id="enquiryTitle">Tell us what you need</h2>
+    <p class="section-lead">Share a few details and our team will get back to you.</p>
+    <form class="modal-form" id="enquiryForm">
+      <div class="form-grid">
+        <label class="field"><span>Your name</span><input type="text" name="name" placeholder="Full name" required></label>
+        <label class="field"><span>Phone</span><input type="tel" name="phone" placeholder="Contact number" required></label>
+        <label class="field field-full"><span>Email</span><input type="email" name="email" placeholder="you@company.com" required></label>
+        <label class="field field-full"><span>Service</span><select name="service"><option value="">Choose a service</option><option value="Industrial Security Services">Industrial Security Services</option><option value="Bank Security">Bank Security</option><option value="Dog Squad">Dog Squad</option><option value="Commercial Security Services">Commercial Security Services</option><option value="Residential Security Services">Residential Security Services</option><option value="Special Event Security Services">Special Event Security Services</option><option value="Security Consultancy">Security Consultancy</option><option value="Security Audit">Security Audit</option><option value="Armed Guard Commandos">Armed Guard Commandos</option><option value="Cash Van Services">Cash Van Services</option><option value="Electronic Security">Electronic Security</option><option value="Surveillance">Surveillance</option><option value="Facility / Attendant Services">Facility / Attendant Services</option><option value="Housekeeping / Utility Services">Housekeeping / Utility Services</option><option value="Antecedent Verification">Antecedent Verification</option></select></label>
+        <label class="field field-full"><span>Message</span><textarea name="message" rows="4" placeholder="Briefly describe your requirement"></textarea></label>
       </div>
-    </section>
-
-    <section class="section tech-facility">
-      <div class="container">
-        <img src="assets/hero.png?seed=aus-tech/1200/500" alt="Security operations technology facility" class="tech-img animate-zoom" />
-        <div class="tech-overlay">
-          <span class="tech-eyebrow">Our Technology</span>
-          <h2>Technology that extends your team.</h2>
-          <p>Integrated systems, real-time visibility, and local expertise working together to help you stay ready for what's next.</p>
-          <a href="services.html" class="btn btn-outline" style="margin-top:16px;">Explore Technology</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- YOUR VALUED PARTNER -->
-    <section class="section">
-      <div class="container">
-        <div class="animate" style="text-align:center; margin-bottom:48px;">
-          <span class="demo-tag">Partner</span>
-          <h2 class="section-title" style="margin-bottom:12px;">Your Valued Partner</h2>
-          <p class="section-subtitle" style="margin-bottom:0;">This is demo text. You can replace it here.</p>
-        </div>
-        <div class="partner-grid">
-          <div class="partner-card animate delay-1">
-            <h4>Select capability: Built to Support You Locally</h4>
-            <p>This is demo text. You can replace it here. Your on-site team is backed by local recruiting, training, operations, and emergency response resources.</p>
-            <a href="#" class="btn btn-outline" style="padding:8px 16px; font-size:0.85rem;">Find a Local Office</a>
-          </div>
-          <div class="partner-card animate delay-2">
-            <h4>Select capability: Expertise in Your Industry</h4>
-            <p>This is demo text. You can replace it here. Every industry brings its own operational demands, priorities, and risks.</p>
-            <a href="contact.html" class="btn btn-outline" style="padding:8px 16px; font-size:0.85rem;">Talk to an Expert</a>
-          </div>
-          <div class="partner-card animate delay-3">
-            <h4>Select capability: Understand Your Unique Risk Profile</h4>
-            <p>This is demo text. You can replace it here. Our proprietary risk assessment tool helps you better understand your organization's unique risk profile.</p>
-            <a href="#" class="btn btn-outline" style="padding:8px 16px; font-size:0.85rem;">Explore Risk360</a>
-          </div>
-          <div class="partner-card animate delay-4">
-            <h4>Select capability: Join our Team</h4>
-            <p>This is demo text. You can replace it here. With opportunities across a wide range of roles and locations.</p>
-            <a href="#" class="btn btn-outline" style="padding:8px 16px; font-size:0.85rem;">Explore Careers</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AWARDS -->
-    <section class="section" style="background:var(--bg-light);">
-      <div class="container">
-        <div class="animate" style="text-align:center; margin-bottom:40px;">
-          <span class="demo-tag">Awards</span>
-          <h2 class="section-title" style="margin-bottom:12px;">Awards and Accolades</h2>
-          <p class="section-subtitle" style="margin-bottom:0;">This is demo text. You can replace it here.</p>
-        </div>
-        <div class="awards-row">
-          <div class="award-badge animate delay-1"><img src="assets/Zillion%20Security%20Services%20Shield%20Logo.png" alt="Award 1" /></div>
-          <div class="award-badge animate delay-2"><img src="assets/Zillion%20Security%20Services%20Shield%20Logo.png" alt="Award 2" /></div>
-          <div class="award-badge animate delay-3"><img src="assets/Zillion%20Security%20Services%20Shield%20Logo.png" alt="Award 3" /></div>
-          <div class="award-badge animate delay-4"><img src="assets/Zillion%20Security%20Services%20Shield%20Logo.png" alt="Award 4" /></div>
-          <div class="award-badge animate delay-5"><img src="assets/Zillion%20Security%20Services%20Shield%20Logo.png" alt="Award 5" /></div>
-          <div class="award-badge animate delay-6"><img src="assets/Zillion%20Security%20Services%20Shield%20Logo.png" alt="Award 6" /></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section fade-in">
-      <div class="container">
-        <h2>Let's work together to help secure the promise of tomorrow.</h2>
-        <p>This is demo text. You can replace it here. Get in touch with our team today.</p>
-        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-          <a href="tel:+18005550199" class="btn btn-primary btn-lg" style="background:var(--primary);">(866) 703-7666</a>
-          <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
-          <a href="#" class="btn btn-primary btn-lg" style="background:var(--primary);">Find a Job</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <img src="assets/zillion-security-services-logo.svg" alt="Zillion Security Services" class="footer-logo" />
-            <p class="footer-desc">Professional security guard services with local execution and national scale. Protecting your people, property, and assets since 2014.</p>
-          </div>
-          <div class="footer-col">
-            <h4>About Us</h4>
-            <a href="about.html">Our Story</a>
-            <a href="about.html">Leadership</a>
-            <a href="#">Purpose</a>
-            <a href="contact.html">Contact Us</a>
-          </div>
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <a href="services.html">Services</a>
-            <a href="industries.html">Industries</a>
-            <a href="index.html#resources">Resources</a>
-            <a href="contact.html#offices">Offices</a>
-            <a href="contact.html#careers">Careers</a>
-          </div>
-          <div class="footer-col">
-            <h4>More</h4>
-            <a href="contact.html">Request Quote</a>
-            <a href="#">Client Portal</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-          </div>
-        </div>
-
-        <div class="footer-service-icons">
-          <a href="services.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><span>Guards</span></a>
-          <a href="services.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><span>Remote</span></a>
-          <a href="services.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg><span>Technology</span></a>
-          <a href="services.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg><span>Training</span></a>
-          <a href="industries.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><path d="M9 21v-5h6v5"></path></svg><span>Facilities</span></a>
-          <a href="services.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Locations</span></a>
-        </div>
-
-        <div class="also-interest">
-          <h4>Also of Interest</h4>
-          <div>
-            <a href="services.html">Explore Security Services</a>
-            <a href="about.html">Why Zillion Security</a>
-            <a href="contact.html">Request a Quote</a>
-          </div>
-        </div>
-
-        <div class="regional-sites">
-          <span>Regional Sites</span>
-          <a href="#">India</a>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; <span id="year"></span> Zillion Security Services. All rights reserved.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.063 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.063-2.064 2.063zm1.782 13.019H3.555v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H2.977V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM16.616 14.23c-.47-.9-1.64-1.85-3.371-1.85-3.601 0-4.267 2.37-4.267 5.455v6.286h-3.371v-11h3.371v2.46c0 .82.43 1.49.878 1.49.454 0 .87-.67.87-1.49v-2.46c0-.19.015-.777-.01-1.536 2.394-.225 4.028-1.761 4.028-3.68 0-2.136-1.421-2.95-3.272-2.95h-.015c-2.687-.006-3.272 1.154-3.272 2.95v11z"></path></svg>
-            </a>
-            <a href="#" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231z"></path></svg>
-            </a>
-            <a href="#" aria-label="Twitter">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.3 3.8c-.9.4-1.8.7-2.8 1 1-.6 1.7-1.5 2.2-2.5-.9.5-1.9.9-2.9 1.3-1-1-2.3-1.6-3.7-1.6-2.8 0-5 2.2-5 5 0 .4 0 .8.1 1.2-4.2-.2-7.9-2.2-10.6-5.3C2.6 6.5 2 7.8 2 9.2c0 1.8.7 3.4 1.9 4.5C2.6 14 1.2 13.7 1 13.3c0 .1 0 .3.1.5 0 2.4 1.7 4.5 3.9 4.9-1.7.5-3.5.8-5.4.8-.5 0-1-.1-1.5-.2C.8 18.1 2.8 19 5 19c-1.6.1-3.1-.7-4.2-1.7-.1 0-.2 0-.3-.1c.4 1.3 1.7 2.3 3.1 2.3c-.4 0-.8-.1-1.2-.3c1.3 2.4 4 4.1 6.8 4.1c-1.7 1.2-3.8 1.9-6 1.9c-.4 0-.8 0-1.2-.1c2.5 1.6 5.6 2.5 8.8 2.5c10.5 0 16.3-8.7 16.3-16.3 0-.2 0-.5-.1-.8c1.3-.9 2.5-1.9 3.5-3.1"></path></svg>
-            </a>
-            <a href="#" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584-.012 4.85-.074 3.252-.16 6.5-.76 8.114-1.956 1.63-1.21 2.5-2.88 2.5-4.645 0-1.875-1.01-3.65-2.71-4.8-1.71-1.16-3.9-1.81-6.114-1.81C8.44 0 6.114.73 3.886 1.89 2.19 3.04 1.28 4.82 1.28 6.69c0 1.79.87 3.49 2.5 4.75 1.63 1.26 4.94 1.88 8.22 2.04 1.63.06 4.91.25 8.19-.07 3.28-.32 5.36-1.5 5.36-1.5S18.73 9.1 17.1 7.95c-.61-.43-1.37-.72-2.2-.86-.83-.14-1.42-.15-2.3-.15-2.36 0-4.3.33-6.08 1.68-2.01 1.5-3.16 4-3.16 6.51 0 1.39.53 2.76 1.48 3.86 1.01 1.16 2.29 1.79 3.7 1.79 1.45 0 2.74-.66 3.79-1.83 1.04-1.16 1.64-2.82 1.64-4.41 0-1.39-.48-2.76-1.37-3.83-.89-1.07-2.22-1.77-3.79-1.8-1.12-.02-2.36.04-3.9.17-.32.03-.66.05-1.02.05s-.7-.02-1.02-.05c-1.54-.13-2.78-.19-3.9-.17-1.57.03-2.9.73-3.79 1.8-.89 1.07-1.37 2.44-1.37 3.83 0 1.59.6 3.25 1.64 4.41 1.05 1.17 2.34 1.83 3.79 1.83 1.41 0 2.69-.63 3.7-1.79.95-1.1 1.48-2.47 1.48-3.86 0-2.51-1.15-5.01-3.16-6.51-.01-.002-.01-.007-.02-.009z"></path></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="js/script.js" type="module"></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-      // Scroll-triggered animations
-      (function () {
-        var els = document.querySelectorAll('.animate, .animate-left, .animate-right, .animate-zoom');
-        if (!('IntersectionObserver' in window)) {
-          els.forEach(function (el) { el.classList.add('in-view'); });
-          return;
-        }
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) {
-              e.target.classList.add('in-view');
-              io.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.15 });
-        els.forEach(function (el) { io.observe(el); });
-      })();
-    </script>
-  </body>
+      <button class="btn btn-primary" type="submit">Send Enquiry <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+      <p class="form-success" hidden>Thank you. We will contact you shortly.</p>
+    </form>
+  </div>
+</div>
+<script type="module" src="js/script.js"></script>
+</body>
 </html>

@@ -1,53 +1,203 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
+  const menuToggle = document.getElementById('menuToggle')
+  const mobileNav = document.getElementById('mobileNav')
 
-  if (menuBtn && mobileMenu) {
-    const menuSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
-    const closeSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
-    let isOpen = false;
-    menuBtn.addEventListener('click', () => {
-      isOpen = !isOpen;
-      mobileMenu.style.display = isOpen ? 'block' : 'none';
-      menuBtn.innerHTML = isOpen ? closeSvg : menuSvg;
-    });
-
-    document.querySelectorAll('.mobile-menu a, .mobile-phone').forEach((link) => {
-      link.addEventListener('click', () => {
-        isOpen = false;
-        mobileMenu.style.display = 'none';
-        menuBtn.innerHTML = menuSvg;
-      });
-    });
+  const setMenu = (open) => {
+    if (!menuToggle || !mobileNav) return
+    mobileNav.classList.toggle('is-open', open)
+    menuToggle.classList.toggle('is-open', open)
+    menuToggle.setAttribute('aria-expanded', String(open))
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
   }
 
-  const contactForm = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const btnText = document.getElementById('btnText');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      submitBtn.disabled = true;
-      btnText.textContent = 'Sending...';
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        btnText.textContent = 'Send Message';
-        contactForm.reset();
-        const section = contactForm.closest('section');
-        section.innerHTML = `
-          <div class="container">
-            <div style="max-width:700px; margin:0 auto; text-align:center; padding:80px 0;">
-              <div style="width:64px; height:64px; border-radius:50%; background:rgba(16,185,129,0.12); display:flex; align-items:center; justify-content:center; margin:0 auto 24px; color:var(--success);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2l-7 13.45 2.51 6.62L9.17 15 4 22l6.5-9.81L22 2z"></path></svg>
-              </div>
-              <h2 style="font-size:2rem; font-weight:700; color:var(--primary); margin-bottom:16px;">Message Sent!</h2>
-              <p style="color:var(--text-muted); margin-bottom:24px;">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
-              <button onclick="location.reload()" class="btn btn-primary">Send Another Message</button>
-            </div>
-          </div>
-        `;
-      }, 1500);
-    });
+  if (menuToggle && mobileNav) {
+    menuToggle.addEventListener('click', () => setMenu(!mobileNav.classList.contains('is-open')))
+    mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)))
+    const groups = mobileNav.querySelectorAll('.mobile-group')
+    groups.forEach((group) => {
+      group.addEventListener('toggle', () => {
+        if (group.open) groups.forEach((other) => { if (other !== group) other.open = false })
+      })
+    })
   }
-});
+
+  const closeDropdowns = () => {
+    document.querySelectorAll('.nav-item.is-open').forEach((item) => {
+      item.classList.remove('is-open')
+      const toggle = item.querySelector('[data-dropdown-toggle]')
+      if (toggle) toggle.setAttribute('aria-expanded', 'false')
+    })
+  }
+
+  document.querySelectorAll('[data-dropdown-toggle]').forEach((toggle) => {
+    const item = toggle.closest('.nav-item')
+    if (!item) return
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation()
+      const willOpen = !item.classList.contains('is-open')
+      closeDropdowns()
+      if (willOpen) {
+        item.classList.add('is-open')
+        toggle.setAttribute('aria-expanded', 'true')
+      }
+    })
+    if (window.matchMedia('(hover: hover)').matches) {
+      item.addEventListener('mouseenter', () => {
+        closeDropdowns()
+        item.classList.add('is-open')
+        toggle.setAttribute('aria-expanded', 'true')
+      })
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('is-open')
+        toggle.setAttribute('aria-expanded', 'false')
+      })
+    }
+  })
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.nav-item.has-dropdown')) closeDropdowns()
+  })
+
+  const counters = document.querySelectorAll('.counter')
+  if (counters.length) {
+    const runCounter = (element) => {
+      if (element.dataset.done === 'true') return
+      element.dataset.done = 'true'
+      const target = Number(element.dataset.count || 0)
+      const duration = 1500
+      const startTime = performance.now()
+      const tick = (now) => {
+        const progress = Math.min((now - startTime) / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3)
+        element.textContent = Math.floor(target * eased).toLocaleString('en-US')
+        if (progress < 1) requestAnimationFrame(tick)
+      }
+      requestAnimationFrame(tick)
+    }
+    if ('IntersectionObserver' in window) {
+      const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            runCounter(entry.target)
+            observer.unobserve(entry.target)
+          }
+        })
+      }, { threshold: 0.4 })
+      counters.forEach((counter) => counterObserver.observe(counter))
+    } else {
+      counters.forEach(runCounter)
+    }
+  }
+
+  document.querySelectorAll('[data-slider]').forEach((track) => {
+    const shell = track.closest('.slider-shell') || document
+    const prev = shell.querySelector('[data-slider-prev]')
+    const next = shell.querySelector('[data-slider-next]')
+    const progress = shell.querySelector('.slider-progress-bar')
+    const stepSize = () => {
+      const slide = track.querySelector('.service-slide')
+      return slide ? slide.getBoundingClientRect().width + 20 : 300
+    }
+    const updateProgress = () => {
+      if (!progress) return
+      const max = track.scrollWidth - track.clientWidth
+      const ratio = max > 0 ? track.scrollLeft / max : 0
+      progress.style.width = `${Math.max(18, Math.min(100, ratio * 100))}%`
+    }
+    if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -stepSize(), behavior: 'smooth' }))
+    if (next) next.addEventListener('click', () => track.scrollBy({ left: stepSize(), behavior: 'smooth' }))
+    track.addEventListener('scroll', updateProgress, { passive: true })
+    window.addEventListener('resize', updateProgress)
+    updateProgress()
+
+    let dragging = false
+    let startX = 0
+    let startScroll = 0
+    track.addEventListener('dragstart', (event) => event.preventDefault())
+    track.addEventListener('pointerdown', (event) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return
+      dragging = true
+      startX = event.clientX
+      startScroll = track.scrollLeft
+      track.classList.add('is-dragging')
+    })
+    window.addEventListener('pointermove', (event) => {
+      if (!dragging) return
+      track.scrollLeft = startScroll - (event.clientX - startX)
+    })
+    window.addEventListener('pointerup', () => {
+      dragging = false
+      track.classList.remove('is-dragging')
+    })
+    window.addEventListener('pointercancel', () => {
+      dragging = false
+      track.classList.remove('is-dragging')
+    })
+  })
+
+  const modal = document.getElementById('enquiryModal')
+  let lastFocused = null
+  const openModal = (trigger) => {
+    if (!modal) return
+    lastFocused = trigger || document.activeElement
+    modal.hidden = false
+    document.body.classList.add('modal-open')
+    const firstField = modal.querySelector('input')
+    if (firstField) window.setTimeout(() => firstField.focus(), 40)
+  }
+  const closeModal = () => {
+    if (!modal || modal.hidden) return
+    modal.hidden = true
+    document.body.classList.remove('modal-open')
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus()
+  }
+  document.querySelectorAll('[data-modal-open]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault()
+      openModal(button)
+    })
+  })
+  if (modal) {
+    modal.querySelectorAll('[data-modal-close]').forEach((element) => element.addEventListener('click', closeModal))
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal()
+    })
+  }
+
+  document.querySelectorAll('form[data-enquiry-form], #enquiryForm').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+      const success = form.querySelector('.form-success')
+      if (success) success.hidden = false
+      form.reset()
+    })
+  })
+
+  document.querySelectorAll('[data-year]').forEach((element) => {
+    element.textContent = String(new Date().getFullYear())
+  })
+
+  const reveals = document.querySelectorAll('.reveal')
+  if (reveals.length) {
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' })
+      reveals.forEach((element) => revealObserver.observe(element))
+    } else {
+      reveals.forEach((element) => element.classList.add('is-visible'))
+    }
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return
+    closeModal()
+    closeDropdowns()
+    setMenu(false)
+  })
+})
