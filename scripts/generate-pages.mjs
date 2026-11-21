@@ -299,7 +299,7 @@ const heroSection = () => `
     <div class="hero-content reveal">
       <p class="eyebrow">${brand}</p>
       <h1 class="hero-title">Protection you can plan around.</h1>
-      <p class="hero-text">Trained guards, smart systems, and dependable response for businesses across India.</p>
+      <p class="hero-text">From industrial facilities and corporate workplaces to residential environments, discover security services designed around your protection requirements.</p>
       <div class="hero-actions"><a class="btn btn-primary" href="contact-us.html">Request a Quote ${icon('arrow')}</a><a class="btn btn-ghost" href="services.html">Our Services</a></div>
     </div>
   </div>
