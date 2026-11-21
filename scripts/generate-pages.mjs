@@ -4,10 +4,11 @@ import { fileURLToPath } from 'node:url'
 
 const root = fileURLToPath(new URL('..', import.meta.url))
 const brand = 'Zillion Security Services'
-const phone = '(800) 555-0199'
-const altPhone = '+91 7498458432'
-const email = 'info@zillionsecurity.in'
-const address = '101, Omega House, Hiranandani Gardens, Powai, Mumbai - 400 076, Maharashtra.'
+const phone = '+91 9820789991'
+const phoneHref = '+919820789991'
+const email = 'zillions367@gmail.com'
+const website = 'www.zillionsecurityservices.com'
+const address = 'Office No. 210, C-Wing, Grace Plaza, S.V. Road, Jogeshwari (West), Mumbai - 102.'
 
 const esc = (value) => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
@@ -146,7 +147,7 @@ const header = () => `
 <div class="topbar">
   <div class="container topbar-inner">
     <div class="topbar-contact">
-      <a class="topbar-link" href="tel:8005550199">${icon('phone')}<span>${esc(phone)}</span></a>
+      <a class="topbar-link" href="tel:${phoneHref}">${icon('phone')}<span>${esc(phone)}</span></a>
       <a class="topbar-link" href="mailto:${email}">${icon('mail')}<span>${esc(email)}</span></a>
     </div>
   </div>
@@ -184,13 +185,13 @@ const header = () => `
   </div>
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <div class="mobile-nav-inner">
-      <div class="mobile-nav-head"><span>Menu</span><a href="tel:8005550199">${esc(phone)}</a></div>
+      <div class="mobile-nav-head"><span>Menu</span><a href="tel:${phoneHref}">${esc(phone)}</a></div>
       <a class="mobile-link" href="index.html">Home</a>
       <details class="mobile-group"><summary>About Us ${icon('chevron', 'caret')}</summary><div class="mobile-group-content">${linkList(aboutLinks, 'mobile-sublinks')}</div></details>
       <details class="mobile-group"><summary>Services ${icon('chevron', 'caret')}</summary><div class="mobile-group-content">${linkList(services.map((service) => ({ label: service.label, href: `service-${service.slug}.html` })), 'mobile-sublinks')}</div></details>
       ${primaryNav.map((item) => `<a class="mobile-link" href="${item.href}">${esc(item.label)}</a>`).join('')}
       <details class="mobile-group"><summary>More ${icon('chevron', 'caret')}</summary><div class="mobile-group-content">${linkList(moreLinks, 'mobile-sublinks')}</div></details>
-      <div class="mobile-meta"><a href="mailto:${email}">${esc(email)}</a><span>${esc(altPhone)}</span></div>
+      <div class="mobile-meta"><a href="mailto:${email}">${esc(email)}</a><span>${esc(website)}</span></div>
       <a class="btn btn-primary mobile-cta" href="contact-us.html">Contact Us ${icon('arrow')}</a>
     </div>
   </nav>
@@ -212,9 +213,11 @@ const footer = () => `
         <h2 class="footer-heading">About Us</h2>
         ${linkList(aboutLinks, 'footer-links')}
       </div>
-      <div class="footer-column">
+      <div class="footer-column footer-listing">
         <h2 class="footer-heading">Services</h2>
         ${linkList(services.slice(0, 8).map((service) => ({ label: service.label, href: `service-${service.slug}.html` })), 'footer-links')}
+        <p>Security Services<br>Security Guard Services<br>Security Services For Office<br>Security Services For Bouncer<br>Security Services For Bank<br>Security Services For Residence<br>Security Services For All India<br>Security Servic...</p>
+        <p class="footer-source">Source: Justdial.com – Read more at: <a href="https://www.justdial.com/Mumbai/Zillion-Security-Service-Jogeshwari-West/022PXX22-XX22-240701124955-I6I9_BZDET" target="_blank" rel="noopener">www.justdial.com/Mumbai/Zillion-Security-Service-Jogeshwari-West/022PXX22-XX22-240701124955-I6I9_BZDET</a></p>
       </div>
       <div class="footer-column">
         <h2 class="footer-heading">More Services</h2>
@@ -239,7 +242,8 @@ const footer = () => `
         <h2 class="footer-heading">Contact</h2>
         <p class="footer-label">Head Office</p><p>${esc(address)}</p>
         <p class="footer-label">Email</p><p><a href="mailto:${email}">${esc(email)}</a></p>
-        <p class="footer-label">Phone</p><p><a href="tel:8005550199">${esc(phone)}</a><br><a href="tel:7498458432">${esc(altPhone)}</a></p>
+        <p class="footer-label">Phone</p><p><a href="tel:${phoneHref}">${esc(phone)}</a></p>
+        <p class="footer-label">Website</p><p><a href="https://${website}" target="_blank" rel="noopener">${esc(website)}</a></p>
         <a class="footer-enquire" href="#enquiry" data-modal-open>Enquire Now ${icon('arrow')}</a>
       </div>
     </div>
@@ -388,7 +392,7 @@ const networkSection = () => `
       <h2 class="section-title">Local teams, connected nationwide.</h2>
       <p class="section-lead">Our branch network brings hiring, training, supervision, and support closer to every client we serve.</p>
       <div class="network-stats">${networkStats.map((stat) => `<div class="network-stat"><span class="network-stat-icon">${icon(stat.icon)}</span><strong>${esc(stat.value)}</strong><span>${esc(stat.label)}</span></div>`).join('')}</div>
-      <div class="office-list">${offices.map((office) => `<div class="office-item"><h3 class="office-name">${esc(office.name)}</h3><p class="office-text">${esc(office.text)}</p><a href="tel:8005550199">${esc(phone)}</a></div>`).join('')}</div>
+      <div class="office-list">${offices.map((office) => `<div class="office-item"><h3 class="office-name">${esc(office.name)}</h3><p class="office-text">${esc(office.text)}</p><a href="tel:${phoneHref}">${esc(phone)}</a></div>`).join('')}</div>
       <a class="read-link" href="network.html">Read More ${icon('arrow')}</a>
     </div>
     <div class="map-panel reveal delay-2">${mapGraphic()}<div class="map-callout"><span class="map-callout-icon">${icon('pin')}</span><div><strong>${esc(address)}</strong><span>${esc(email)}</span></div></div></div>
@@ -432,7 +436,7 @@ const contactSection = (heading = 'Talk to our team') => `
     <div class="contact-details reveal"><p class="section-kicker">Contact Us</p><h2 class="section-title">${esc(heading)}</h2><p class="section-lead">Call, email, or send a short note. We will point you to the right person.</p>
       <div class="detail-row"><span class="detail-icon">${icon('pin')}</span><div><strong>Head Office</strong><p>${esc(address)}</p></div></div>
       <div class="detail-row"><span class="detail-icon">${icon('mail')}</span><div><strong>Email</strong><p><a href="mailto:${email}">${esc(email)}</a></p></div></div>
-      <div class="detail-row"><span class="detail-icon">${icon('phone')}</span><div><strong>Phone</strong><p><a href="tel:8005550199">${esc(phone)}</a><br><a href="tel:7498458432">${esc(altPhone)}</a></p></div></div>
+      <div class="detail-row"><span class="detail-icon">${icon('phone')}</span><div><strong>Phone</strong><p><a href="tel:${phoneHref}">${esc(phone)}</a></p></div></div>
       <div class="detail-row"><span class="detail-icon">${icon('clock')}</span><div><strong>Response</strong><p>Our team replies to new enquiries within one working day.</p></div></div>
     </div>
     <div class="contact-form-wrap reveal delay-2"><h3 class="form-heading">Send an enquiry</h3><form class="modal-form contact-form" data-enquiry-form><div class="form-grid">
