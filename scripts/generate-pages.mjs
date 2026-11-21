@@ -142,7 +142,7 @@ const linkList = (items, className) => `<ul class="${className}">${items.map((it
 
 const header = () => `
 <div class="site-head">
-<a class="logo-panel" href="index.html" aria-label="${brand} home"><img src="assets/zillion-security-services-logo.svg" alt="${brand}"></a>
+<a class="brand-mark" href="index.html" aria-label="${brand} home"><img src="assets/Zillion Security Services Shield Logo.png" alt="${brand}"></a>
 <div class="topbar">
   <div class="container topbar-inner">
     <div class="topbar-contact">
