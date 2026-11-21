@@ -147,7 +147,7 @@ button {
 .topbar-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   min-height: var(--topbar-height);
   gap: 20px;
   padding-left: var(--logo-reserve);
@@ -159,16 +159,14 @@ button {
   gap: 22px;
 }
 
-.topbar-link,
-.topbar-alt a {
+.topbar-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: color 0.2s ease;
 }
 
-.topbar-link:hover,
-.topbar-alt a:hover {
+.topbar-link:hover {
   color: var(--white);
 }
 
@@ -177,8 +175,7 @@ button {
   padding-left: 22px;
 }
 
-.topbar-link + .topbar-link::before,
-.topbar-alt::before {
+.topbar-link + .topbar-link::before {
   content: "";
   position: absolute;
   left: 0;
@@ -193,17 +190,6 @@ button {
   width: 15px;
   height: 15px;
   color: #e8797d;
-}
-
-.topbar-alt {
-  position: relative;
-  padding-left: 22px;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.topbar-alt a {
-  color: var(--white);
-  font-weight: 700;
 }
 
 .site-head {
@@ -2206,7 +2192,6 @@ button {
 @media (max-width: 760px) {
   .site-head { --topbar-height: 36px; --nav-height: 60px; --brand-mark-width: 102px; --brand-mark-mat: 8px; --brand-mark-side: 2px; --logo-reserve: 150px; }
   .container { width: min(100% - 32px, 1240px); }
-  .topbar-alt { display: none; }
   .topbar-contact { gap: 16px; }
   .topbar-link { font-size: 0.72rem; }
   .contact-btn { display: none; }

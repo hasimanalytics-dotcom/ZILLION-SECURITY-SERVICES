@@ -149,7 +149,6 @@ const header = () => `
       <a class="topbar-link" href="tel:8005550199">${icon('phone')}<span>${esc(phone)}</span></a>
       <a class="topbar-link" href="mailto:${email}">${icon('mail')}<span>${esc(email)}</span></a>
     </div>
-    <div class="topbar-alt"><span>Alternate</span> <a href="tel:7498458432">${esc(altPhone)}</a></div>
   </div>
 </div>
 <header class="site-header">
