@@ -275,7 +275,7 @@ const modal = () => `
 
 const heroSection = () => `
 <section class="hero" id="top">
-  <div class="hero-media"><img class="hero-poster" src="assets/hero.png" alt="Security professional on duty"><div class="hero-shade"></div></div>
+  <div class="hero-media"><video class="hero-video" src="assets/zillion_video_cleaner_crop.mp4" poster="assets/hero.png" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video><div class="hero-shade"></div></div>
   <div class="container hero-inner">
     <div class="hero-content reveal">
       <p class="eyebrow">${brand}</p>
