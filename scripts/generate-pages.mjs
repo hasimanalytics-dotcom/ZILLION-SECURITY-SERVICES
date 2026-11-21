@@ -144,11 +144,11 @@ const header = () => `
 <div class="site-head">
 <div class="topbar">
   <div class="container topbar-inner">
+    <a class="topbar-brand" href="index.html" aria-label="${brand} home"><img src="assets/zillion-security-services-logo.svg" alt=""></a>
     <div class="topbar-contact">
       <a class="topbar-link" href="tel:8005550199">${icon('phone')}<span>${esc(phone)}</span></a>
       <a class="topbar-link" href="mailto:${email}">${icon('mail')}<span>${esc(email)}</span></a>
     </div>
-    <div class="topbar-alt"><span>Alternate</span> <a href="tel:7498458432">${esc(altPhone)}</a></div>
   </div>
 </div>
 <header class="site-header">
@@ -191,7 +191,7 @@ const header = () => `
       <details class="mobile-group"><summary>Services ${icon('chevron', 'caret')}</summary><div class="mobile-group-content">${linkList(services.map((service) => ({ label: service.label, href: `service-${service.slug}.html` })), 'mobile-sublinks')}</div></details>
       ${primaryNav.map((item) => `<a class="mobile-link" href="${item.href}">${esc(item.label)}</a>`).join('')}
       <details class="mobile-group"><summary>More ${icon('chevron', 'caret')}</summary><div class="mobile-group-content">${linkList(moreLinks, 'mobile-sublinks')}</div></details>
-      <div class="mobile-meta"><a href="mailto:${email}">${esc(email)}</a><span>${esc(altPhone)}</span></div>
+      <div class="mobile-meta"><a href="mailto:${email}">${esc(email)}</a></div>
       <a class="btn btn-primary mobile-cta" href="contact-us.html">Contact Us ${icon('arrow')}</a>
     </div>
   </nav>
@@ -275,7 +275,7 @@ const modal = () => `
 
 const heroSection = () => `
 <section class="hero" id="top">
-  <div class="hero-media"><img class="hero-poster" src="assets/hero.png" alt="Security professional on duty"><div class="hero-shade"></div></div>
+  <div class="hero-media"><img class="hero-poster" src="assets/hero.png" alt="Security professional on duty"><div class="hero-shade"></div><div class="hero-logo"><img src="assets/zillion-security-services-logo.svg" alt="${brand}"></div></div>
   <div class="container hero-inner">
     <div class="hero-content reveal">
       <p class="eyebrow">${brand}</p>
