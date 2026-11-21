@@ -12,10 +12,9 @@
   --dark-2: #202a36;
   --topbar-height: 40px;
   --nav-height: 90px;
-  --brand-mark-width: 196px;
-  --brand-mark-top: 24px;
+  --brand-mark-width: 180px;
   --brand-mark-mat: 12px;
-  --logo-reserve: 260px;
+  --logo-reserve: 244px;
   --shadow: 0 18px 45px rgba(21, 28, 38, 0.12);
   --radius: 14px;
 }
@@ -229,7 +228,7 @@ button {
 
 .brand-mark {
   position: absolute;
-  top: var(--brand-mark-top);
+  top: var(--brand-mark-mat);
   left: max(24px, calc((100% - 1240px) / 2));
   z-index: 55;
   display: block;
@@ -2182,7 +2181,7 @@ button {
 }
 
 @media (max-width: 1020px) {
-  .site-head { --nav-height: 82px; --brand-mark-width: 150px; --brand-mark-mat: 10px; --logo-reserve: 200px; --brand-mark-top: 18px; }
+  .site-head { --nav-height: 82px; --brand-mark-width: 138px; --brand-mark-mat: 10px; --logo-reserve: 198px; }
   .desktop-nav { display: none; }
   .menu-toggle { display: flex; }
   .header-inner { justify-content: space-between; }
@@ -2201,7 +2200,7 @@ button {
 }
 
 @media (max-width: 760px) {
-  .site-head { --topbar-height: 36px; --nav-height: 70px; --brand-mark-width: 110px; --brand-mark-mat: 8px; --logo-reserve: 150px; --brand-mark-top: 10px; }
+  .site-head { --topbar-height: 36px; --nav-height: 70px; --brand-mark-width: 102px; --brand-mark-mat: 8px; --logo-reserve: 150px; }
   .container { width: min(100% - 32px, 1240px); }
   .topbar-alt { display: none; }
   .topbar-contact { gap: 16px; }
@@ -2236,7 +2235,7 @@ button {
 }
 
 @media (max-width: 520px) {
-  .site-head { --brand-mark-width: 92px; --brand-mark-mat: 6px; --logo-reserve: 124px; --brand-mark-top: 8px; }
+  .site-head { --brand-mark-width: 86px; --brand-mark-mat: 6px; --logo-reserve: 130px; }
   .topbar-link span { font-size: 0.68rem; }
   .btn { width: 100%; }
   .hero-actions .btn,
