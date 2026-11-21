@@ -735,9 +735,9 @@ button {
 
 .portrait-img {
   width: 100%;
-  height: 360px;
-  object-fit: contain;
-  padding: 46px;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .portrait-caption {
@@ -1588,34 +1588,22 @@ button {
 }
 
 .site-footer {
-  padding: 76px 0 0;
+  padding: 52px 0 0;
   background: #000;
   color: #c5ced8;
 }
 
 .footer-top {
   display: grid;
-  grid-template-columns: 1.35fr repeat(5, 1fr);
-  gap: 32px;
-  padding-bottom: 56px;
-}
-
-.footer-brand {
-  display: block;
-  margin-bottom: 20px;
-}
-
-.footer-brand img {
-  width: 180px;
-  max-height: 56px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
+  grid-template-columns: 1fr 1.85fr 0.95fr 1.15fr;
+  gap: 28px;
+  padding-bottom: 34px;
 }
 
 .footer-about p {
-  margin: 0 0 20px;
-  font-size: 0.83rem;
-  line-height: 1.7;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
 .footer-socials {
@@ -1626,12 +1614,12 @@ button {
 .footer-socials a {
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid #35404d;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #303a46;
   border-radius: 50%;
   color: #d6dde5;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 800;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
@@ -1642,9 +1630,9 @@ button {
 }
 
 .footer-heading {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   color: var(--white);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1652,9 +1640,10 @@ button {
 
 .footer-links a {
   display: block;
-  padding: 5px 0;
-  font-size: 0.79rem;
-  line-height: 1.45;
+  padding: 4px 0;
+  color: inherit;
+  font-size: 0.78rem;
+  line-height: 1.4;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -1663,14 +1652,26 @@ button {
   transform: translateX(3px);
 }
 
+.footer-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.footer-services-grid .footer-links a {
+  padding: 3px 0;
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
 .footer-contact p {
-  margin: 0 0 6px;
-  font-size: 0.79rem;
-  line-height: 1.55;
+  margin: 0 0 5px;
+  font-size: 0.78rem;
+  line-height: 1.5;
 }
 
 .footer-label {
-  margin-top: 14px !important;
+  margin-top: 11px !important;
   color: var(--white);
   font-weight: 800;
 }
@@ -1679,18 +1680,18 @@ button {
   color: #ff9a9f;
 }
 
-.footer-listing p {
-  margin: 0 0 8px;
-  font-size: 0.74rem;
-  line-height: 1.55;
+.footer-source {
+  margin: 10px 0 0 !important;
+  color: #7d8792;
+  font-size: 0.68rem;
 }
 
 .footer-enquire {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 18px;
-  padding: 9px 14px;
+  margin-top: 14px;
+  padding: 8px 12px;
   border-radius: 5px;
   background: var(--red);
   color: var(--white);
@@ -1708,19 +1709,20 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 22px 0;
-  border-top: 1px solid #2a3542;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer-copy {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
 }
 
 .footer-bottom-links {
   display: flex;
-  gap: 22px;
-  font-size: 0.78rem;
+  align-items: center;
+  gap: 18px;
+  font-size: 0.76rem;
 }
 
 .footer-bottom-links a:hover {
@@ -2174,7 +2176,7 @@ button {
   .nav-link { font-size: 0.78rem; }
   .header-inner { gap: 18px; }
   .mega { width: 680px; }
-  .footer-top { grid-template-columns: repeat(4, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1.7fr 1fr 1.1fr; gap: 22px; }
 }
 
 @media (max-width: 1020px) {
@@ -2192,7 +2194,8 @@ button {
   .industry-grid,
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .clients-grid { grid-template-columns: repeat(3, 1fr); }
-  .footer-top { grid-template-columns: repeat(3, 1fr); }
+  .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-services { grid-column: 1 / -1; }
   .sitemap-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -2216,7 +2219,7 @@ button {
   .split-section,
   .contact-grid,
   .page-hero-inner { grid-template-columns: 1fr; }
-  .portrait-img { height: 280px; }
+  .portrait-img { height: 320px; }
   .stats-grid { gap: 18px; margin-top: 46px; }
   .slider-header { align-items: flex-start; flex-direction: column; gap: 12px; }
   .feature-panel,
@@ -2224,7 +2227,8 @@ button {
   .insight-grid { grid-template-columns: 1fr; }
   .join-collage { max-width: 520px; }
   .assessment-inner { flex-direction: column; align-items: flex-start; }
-  .footer-top { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-services { grid-column: auto; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .page-hero-art { display: none; }
   .sitemap-grid { grid-template-columns: 1fr; }
@@ -2249,6 +2253,7 @@ button {
   .modal-dialog { padding: 28px 22px; }
   .contact-form-wrap { padding: 24px 20px; }
   .footer-top { grid-template-columns: 1fr; }
+  .footer-services-grid { grid-template-columns: 1fr; }
   .footer-socials { margin-bottom: 12px; }
 }
 

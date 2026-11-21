@@ -114,12 +114,43 @@ const careerSlugs = ['andheri', 'bkc', 'borivali', 'kalyan', 'konkan', 'lower-pa
 const titleCase = (slug) => slug.split('-').map((part) => part === 'bkc' ? 'BKC' : part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
 
 const aboutLinks = [
-  { label: 'About Us', href: 'about-us.html' },
-  { label: 'Vision & Mission', href: 'about-us.html#vision' },
-  { label: 'Founder’s Message', href: 'about-us.html#founder' },
-  { label: 'Leadership Team', href: 'about-us.html#leadership' },
-  { label: 'Certifications & Compliance', href: 'certifications-compliance.html' },
-  { label: 'Infrastructure', href: 'infrastructure.html' }
+  { label: 'Company Overview', href: 'about-us.html#overview' },
+  { label: 'Our Mission', href: 'about-us.html#overview' },
+  { label: 'Our Vision', href: 'about-us.html#overview' },
+  { label: 'Why Choose ZILLION?', href: 'why-choose-us.html' },
+  { label: 'Our Team', href: 'about-us.html#overview' },
+  { label: 'Our Commitment', href: 'certifications-compliance.html' }
+]
+
+const footerServicesLeft = [
+  { label: 'Industrial Site Protection', href: 'service-industrial-security-services.html' },
+  { label: 'Manufacturing Sector Security', href: 'service-industrial-security-services.html' },
+  { label: 'Industrial Complex Security', href: 'service-industrial-security-services.html' },
+  { label: 'Executive & Corporate Safeguarding', href: 'service-vip-security-services.html' },
+  { label: 'Corporate Asset Protection', href: 'service-commercial-security-services.html' },
+  { label: 'Industrial Security Solutions', href: 'service-industrial-security-services.html' },
+  { label: 'Security Services For All India', href: 'network.html' },
+  { label: 'Security Services For Residence', href: 'service-residential-security-services.html' }
+]
+
+const footerServicesRight = [
+  { label: 'Industrial Asset Protection', href: 'service-industrial-security-services.html' },
+  { label: 'Plant & Industrial Security', href: 'service-industrial-security-services.html' },
+  { label: 'Heavy Industry Security Services', href: 'service-industrial-security-services.html' },
+  { label: 'Company Security Provision', href: 'service-commercial-security-services.html' },
+  { label: 'Female Security Services', href: 'services.html' },
+  { label: 'Industrial Facility Safeguarding', href: 'service-industrial-security-services.html' },
+  { label: 'Security Services For Corporate', href: 'service-commercial-security-services.html' },
+  { label: 'Security Services For Industrial', href: 'service-industrial-security-services.html' }
+]
+
+const companyFooterLinks = [
+  { label: 'Our Approach', href: 'about-us.html' },
+  { label: 'Industries We Serve', href: 'industries-served.html' },
+  { label: 'Careers', href: 'career.html' },
+  { label: 'FAQs', href: 'contact-us.html' },
+  { label: 'Contact Us', href: 'contact-us.html' },
+  { label: 'Partner With Us', href: 'contact-us.html' }
 ]
 
 const moreLinks = [
@@ -203,40 +234,20 @@ const footer = () => `
   <div class="container">
     <div class="footer-top">
       <div class="footer-column footer-about">
-        <a class="footer-brand" href="index.html"><img src="assets/zillion-security-services-logo.svg" alt="${brand}"></a>
-        <p>Dependable people, clear processes, and security that fits the way you work.</p>
-        <div class="footer-socials">
-          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">yt</a><a href="#" aria-label="Instagram">ig</a>
-        </div>
-      </div>
-      <div class="footer-column">
         <h2 class="footer-heading">About Us</h2>
-        ${linkList(aboutLinks, 'footer-links')}
+        <p>Zillion Security Services provides trained security teams and practical protection across India.</p>
       </div>
-      <div class="footer-column footer-listing">
+      <div class="footer-column footer-listing footer-services">
         <h2 class="footer-heading">Services</h2>
-        ${linkList(services.slice(0, 8).map((service) => ({ label: service.label, href: `service-${service.slug}.html` })), 'footer-links')}
-        <p>Security Services<br>Security Guard Services<br>Security Services For Office<br>Security Services For Bouncer<br>Security Services For Bank<br>Security Services For Residence<br>Security Services For All India<br>Security Servic...</p>
+        <div class="footer-services-grid">
+          <div>${linkList(footerServicesLeft, 'footer-links')}</div>
+          <div>${linkList(footerServicesRight, 'footer-links')}</div>
+        </div>
         <p class="footer-source">Source: Justdial.com</p>
       </div>
       <div class="footer-column">
-        <h2 class="footer-heading">More Services</h2>
-        ${linkList(services.slice(8).map((service) => ({ label: service.label, href: `service-${service.slug}.html` })), 'footer-links')}
-      </div>
-      <div class="footer-column">
         <h2 class="footer-heading">Company</h2>
-        ${linkList([
-          { label: 'Why Choose Us', href: 'why-choose-us.html' },
-          { label: 'Operations', href: 'operations.html' },
-          { label: 'Network', href: 'network.html' },
-          { label: 'Industries We Serve', href: 'industries-served.html' },
-          { label: 'Our Clients', href: 'our-clients.html' },
-          { label: 'Career', href: 'career.html' },
-          { label: 'CSR', href: 'csr.html' },
-          { label: 'Investors', href: 'investors.html' },
-          { label: 'Blog', href: 'blog.html' },
-          { label: 'Sitemap', href: 'sitemap.html' }
-        ], 'footer-links')}
+        ${linkList(companyFooterLinks, 'footer-links')}
       </div>
       <div class="footer-column footer-contact">
         <h2 class="footer-heading">Contact</h2>
@@ -249,7 +260,12 @@ const footer = () => `
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">© <span data-year></span> ${brand}. All rights reserved.</p>
-      <div class="footer-bottom-links"><a href="sitemap.html">Sitemap</a><a href="contact-us.html">Contact Us</a></div>
+      <div class="footer-bottom-links">
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">yt</a><a href="#" aria-label="Instagram">ig</a>
+        </div>
+        <a href="sitemap.html">Sitemap</a><a href="contact-us.html">Contact Us</a>
+      </div>
     </div>
   </div>
 </footer>`
@@ -301,7 +317,7 @@ const overviewSection = () => `
         <a class="read-link" href="about-us.html">Read More ${icon('arrow')}</a>
       </div>
       <div class="overview-media reveal delay-1">
-        <div class="portrait-card"><img class="portrait-img" src="assets/Zillion Security Services Shield Logo.png" alt="Zillion Security Services emblem"><div class="portrait-caption"><strong>Our founding principle</strong><span>Discipline. Integrity. Readiness.</span></div></div>
+        <div class="portrait-card"><img class="portrait-img" src="assets/Zillion Security Guards Duo.png" alt="Zillion Security guards on duty"><div class="portrait-caption"><strong>Our founding principle</strong><span>Discipline. Integrity. Readiness.</span></div></div>
       </div>
     </div>
     <div class="stats-grid">${counters.map((counter, index) => `<div class="stat reveal delay-${index + 1}"><div class="stat-number"><span class="counter" data-count="${counter.value}">0</span>+</div><p class="stat-label">${esc(counter.label)}</p><p class="stat-desc">${esc(counter.desc)}</p></div>`).join('')}</div>
