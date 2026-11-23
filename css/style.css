@@ -235,29 +235,20 @@ button {
 }
 
 .brand-mark::before {
+  --brand-red-cut: calc(var(--brand-cut) + 4px);
   z-index: -2;
+  inset: calc(-1 * var(--brand-mark-mat) - 4px) calc(-1 * var(--brand-mark-mat) - 8px);
   background:
-    linear-gradient(90deg, rgba(197, 31, 48, 0.42), transparent) left / 26px 100% no-repeat,
-    linear-gradient(270deg, rgba(197, 31, 48, 0.42), transparent) right / 26px 100% no-repeat,
-    linear-gradient(225deg, transparent calc(var(--brand-cut) * 0.7071), rgba(8, 9, 11, 0.22) 0) top right / 51% 51% no-repeat,
-    linear-gradient(315deg, transparent calc(var(--brand-cut) * 0.7071), rgba(8, 9, 11, 0.22) 0) bottom right / 51% 51% no-repeat,
-    linear-gradient(rgba(8, 9, 11, 0.22), rgba(8, 9, 11, 0.22)) top left / 51% 51% no-repeat,
-    linear-gradient(rgba(8, 9, 11, 0.22), rgba(8, 9, 11, 0.22)) bottom left / 51% 51% no-repeat;
-  transform: translateY(9px);
-  filter: blur(11px);
+    linear-gradient(160deg, #8F1420, #A51827) top left / 51% 51% no-repeat,
+    linear-gradient(160deg, #A51827, #C51F30) bottom left / 51% 51% no-repeat,
+    linear-gradient(225deg, transparent calc(var(--brand-red-cut) * 0.7071), #A51827 0) top right / 51% 51% no-repeat,
+    linear-gradient(315deg, transparent calc(var(--brand-red-cut) * 0.7071), #C51F30 0) bottom right / 51% 51% no-repeat;
+  filter: drop-shadow(0 6px 8px rgba(8, 9, 11, 0.28));
 }
 
 .brand-mark::after {
   z-index: -1;
   background:
-    linear-gradient(91deg,
-      #8F1420 0,
-      #C51F30 calc(var(--brand-mark-mat) - 1px),
-      transparent var(--brand-mark-mat)) left / 52% 100% no-repeat,
-    linear-gradient(269deg,
-      #8F1420 0,
-      #C51F30 calc(var(--brand-mark-mat) - 1px),
-      transparent var(--brand-mark-mat)) right / 52% 100% no-repeat,
     linear-gradient(225deg,
       transparent calc(var(--brand-cut) * 0.7071 - 1px),
       rgba(21, 28, 38, 0.14) calc(var(--brand-cut) * 0.7071 - 1px),
