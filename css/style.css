@@ -12,11 +12,11 @@
   --dark-2: #202a36;
   --topbar-height: 40px;
   --nav-height: 52px;
-  --brand-mark-width: 500px;
-  --brand-mark-height: 190px;
+  --brand-mark-width: 150px;
+  --brand-mark-height: 120px;
   --brand-mark-mat: 6px;
   --brand-mark-side: 1px;
-  --logo-reserve: 540px;
+  --logo-reserve: 210px;
   --shadow: 0 18px 45px rgba(21, 28, 38, 0.12);
   --radius: 14px;
 }
@@ -224,7 +224,7 @@ button {
   width: var(--brand-mark-width);
   height: var(--brand-mark-height);
   box-sizing: content-box;
-  box-shadow: 0 18px 40px -14px rgba(8, 9, 11, 0.38);
+  box-shadow: 0 10px 22px -8px rgba(8, 9, 11, 0.28);
 }
 
 .brand-mark::before,
@@ -2236,10 +2236,6 @@ button {
 .delay-4 { transition-delay: 0.32s; }
 
 @media (max-width: 1180px) {
-  .site-head { --brand-mark-width: 430px; --brand-mark-height: 170px; --logo-reserve: 466px; }
-  .desktop-nav { display: none; }
-  .menu-toggle { display: flex; }
-  .header-inner { justify-content: space-between; }
   .nav-list { gap: 14px; }
   .nav-link { font-size: 0.78rem; }
   .header-inner { gap: 18px; }
@@ -2248,7 +2244,10 @@ button {
 }
 
 @media (max-width: 1020px) {
-  .site-head { --nav-height: 50px; --brand-mark-width: 340px; --brand-mark-height: 140px; --brand-mark-mat: 6px; --brand-mark-side: 1px; --logo-reserve: 374px; }
+  .site-head { --nav-height: 50px; --brand-mark-width: 118px; --brand-mark-height: 94px; --brand-mark-mat: 5px; --brand-mark-side: 1px; --logo-reserve: 168px; }
+  .desktop-nav { display: none; }
+  .menu-toggle { display: flex; }
+  .header-inner { justify-content: space-between; }
   .overview-grid,
   .operations-grid,
   .network-grid,
@@ -2265,7 +2264,7 @@ button {
 }
 
 @media (max-width: 760px) {
-  .site-head { --topbar-height: 36px; --nav-height: 44px; --brand-mark-width: 250px; --brand-mark-height: 112px; --brand-mark-mat: 5px; --brand-mark-side: 1px; --logo-reserve: 274px; }
+  .site-head { --topbar-height: 36px; --nav-height: 44px; --brand-mark-width: 90px; --brand-mark-height: 72px; --brand-mark-mat: 4px; --brand-mark-side: 1px; --logo-reserve: 132px; }
   .container { width: min(100% - 32px, 1240px); }
   .topbar-contact { gap: 16px; }
   .topbar-link { font-size: 0.72rem; }
@@ -2300,7 +2299,7 @@ button {
 }
 
 @media (max-width: 520px) {
-  .site-head { --nav-height: 42px; --brand-mark-width: 200px; --brand-mark-height: 92px; --brand-mark-mat: 4px; --brand-mark-side: 1px; --logo-reserve: 220px; }
+  .site-head { --nav-height: 42px; --brand-mark-width: 78px; --brand-mark-height: 62px; --brand-mark-mat: 3px; --brand-mark-side: 1px; --logo-reserve: 118px; }
   .topbar-link span { font-size: 0.68rem; }
   .btn { width: 100%; }
   .hero-actions .btn,
