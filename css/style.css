@@ -12,11 +12,9 @@
   --dark-2: #202a36;
   --topbar-height: 40px;
   --nav-height: 52px;
-  --brand-mark-width: 150px;
-  --brand-mark-height: 120px;
-  --brand-mark-mat: 6px;
-  --brand-mark-side: 1px;
-  --logo-reserve: 210px;
+  --logo-height: 52px;
+  --logo-width: 102px;
+  --logo-reserve: 130px;
   --shadow: 0 18px 45px rgba(21, 28, 38, 0.12);
   --radius: 14px;
 }
@@ -215,59 +213,20 @@ button {
 }
 
 .brand-mark {
-  --brand-skew: calc(var(--brand-mark-width) * 0.08);
   position: absolute;
-  top: var(--brand-mark-mat);
+  top: calc(var(--topbar-height) + (var(--nav-height) - var(--logo-height)) / 2);
   left: max(24px, calc((100% - 1240px) / 2));
   z-index: 55;
   display: block;
-  width: var(--brand-mark-width);
-  height: var(--brand-mark-height);
-  box-sizing: content-box;
-  box-shadow: 0 10px 22px -8px rgba(8, 9, 11, 0.28);
-}
-
-.brand-mark::before,
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  inset: calc(-1 * var(--brand-mark-mat));
-  pointer-events: none;
-}
-
-.brand-mark::before {
-  --brand-red-skew: calc(var(--brand-skew) * 1.03);
-  z-index: -2;
-  inset: calc(-1 * var(--brand-mark-mat) - 3px) calc(-1 * var(--brand-mark-mat) - 8px);
-  background: linear-gradient(160deg, #8F1420 0%, #D51F32 100%);
-  clip-path: polygon(
-    var(--brand-red-skew) 0,
-    100% 0,
-    calc(100% - var(--brand-red-skew)) 100%,
-    0 100%
-  );
-}
-
-.brand-mark::after {
-  z-index: -1;
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 58%, #f3f5f7 100%);
-  clip-path: polygon(
-    var(--brand-skew) 0,
-    100% 0,
-    calc(100% - var(--brand-skew)) 100%,
-    0 100%
-  );
-  box-shadow: inset 0 0 0 1px rgba(21, 28, 38, 0.07);
+  width: var(--logo-width);
+  height: var(--logo-height);
 }
 
 .brand-mark img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 59%;
-  max-width: none;
-  height: auto;
-  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .desktop-nav {
@@ -2244,7 +2203,7 @@ button {
 }
 
 @media (max-width: 1020px) {
-  .site-head { --nav-height: 50px; --brand-mark-width: 118px; --brand-mark-height: 94px; --brand-mark-mat: 5px; --brand-mark-side: 1px; --logo-reserve: 168px; }
+  .site-head { --nav-height: 50px; --logo-height: 50px; --logo-width: 98px; --logo-reserve: 126px; }
   .desktop-nav { display: none; }
   .menu-toggle { display: flex; }
   .header-inner { justify-content: space-between; }
@@ -2264,7 +2223,7 @@ button {
 }
 
 @media (max-width: 760px) {
-  .site-head { --topbar-height: 36px; --nav-height: 44px; --brand-mark-width: 90px; --brand-mark-height: 72px; --brand-mark-mat: 4px; --brand-mark-side: 1px; --logo-reserve: 132px; }
+  .site-head { --topbar-height: 36px; --nav-height: 44px; --logo-height: 44px; --logo-width: 86px; --logo-reserve: 114px; }
   .container { width: min(100% - 32px, 1240px); }
   .topbar-contact { gap: 16px; }
   .topbar-link { font-size: 0.72rem; }
@@ -2299,7 +2258,7 @@ button {
 }
 
 @media (max-width: 520px) {
-  .site-head { --nav-height: 42px; --brand-mark-width: 78px; --brand-mark-height: 62px; --brand-mark-mat: 3px; --brand-mark-side: 1px; --logo-reserve: 118px; }
+  .site-head { --nav-height: 42px; --logo-height: 42px; --logo-width: 82px; --logo-reserve: 110px; }
   .topbar-link span { font-size: 0.68rem; }
   .btn { width: 100%; }
   .hero-actions .btn,
